@@ -1,0 +1,593 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B0F9E3932B8291AE00C08FD0 /* RealFlowApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0F9E3922B8291AE00C08FD0 /* RealFlowApp.swift */; };
+		B0F9E3952B8291AE00C08FD0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0F9E3942B8291AE00C08FD0 /* ContentView.swift */; };
+		B0F9E3972B8291AF00C08FD0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B0F9E3962B8291AF00C08FD0 /* Assets.xcassets */; };
+		B0F9E39A2B8291AF00C08FD0 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B0F9E3992B8291AF00C08FD0 /* Preview Assets.xcassets */; };
+		B0F9E3A42B8291AF00C08FD0 /* RealFlowTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0F9E3A32B8291AF00C08FD0 /* RealFlowTests.swift */; };
+		B0F9E3AE2B8291AF00C08FD0 /* RealFlowUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0F9E3AD2B8291AF00C08FD0 /* RealFlowUITests.swift */; };
+		B0F9E3B02B8291AF00C08FD0 /* RealFlowUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0F9E3AF2B8291AF00C08FD0 /* RealFlowUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B0F9E3A02B8291AF00C08FD0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B0F9E3872B8291AE00C08FD0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B0F9E38E2B8291AE00C08FD0;
+			remoteInfo = RealFlow;
+		};
+		B0F9E3AA2B8291AF00C08FD0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B0F9E3872B8291AE00C08FD0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B0F9E38E2B8291AE00C08FD0;
+			remoteInfo = RealFlow;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		B0F9E38F2B8291AE00C08FD0 /* RealFlow.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RealFlow.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B0F9E3922B8291AE00C08FD0 /* RealFlowApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealFlowApp.swift; sourceTree = "<group>"; };
+		B0F9E3942B8291AE00C08FD0 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		B0F9E3962B8291AF00C08FD0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B0F9E3992B8291AF00C08FD0 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		B0F9E39F2B8291AF00C08FD0 /* RealFlowTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RealFlowTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B0F9E3A32B8291AF00C08FD0 /* RealFlowTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealFlowTests.swift; sourceTree = "<group>"; };
+		B0F9E3A92B8291AF00C08FD0 /* RealFlowUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RealFlowUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B0F9E3AD2B8291AF00C08FD0 /* RealFlowUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealFlowUITests.swift; sourceTree = "<group>"; };
+		B0F9E3AF2B8291AF00C08FD0 /* RealFlowUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealFlowUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B0F9E38C2B8291AE00C08FD0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B0F9E39C2B8291AF00C08FD0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B0F9E3A62B8291AF00C08FD0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		B0F9E3862B8291AE00C08FD0 = {
+			isa = PBXGroup;
+			children = (
+				B0F9E3912B8291AE00C08FD0 /* RealFlow */,
+				B0F9E3A22B8291AF00C08FD0 /* RealFlowTests */,
+				B0F9E3AC2B8291AF00C08FD0 /* RealFlowUITests */,
+				B0F9E3902B8291AE00C08FD0 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		B0F9E3902B8291AE00C08FD0 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B0F9E38F2B8291AE00C08FD0 /* RealFlow.app */,
+				B0F9E39F2B8291AF00C08FD0 /* RealFlowTests.xctest */,
+				B0F9E3A92B8291AF00C08FD0 /* RealFlowUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B0F9E3912B8291AE00C08FD0 /* RealFlow */ = {
+			isa = PBXGroup;
+			children = (
+				B0F9E3922B8291AE00C08FD0 /* RealFlowApp.swift */,
+				B0F9E3942B8291AE00C08FD0 /* ContentView.swift */,
+				B0F9E3962B8291AF00C08FD0 /* Assets.xcassets */,
+				B0F9E3982B8291AF00C08FD0 /* Preview Content */,
+			);
+			path = RealFlow;
+			sourceTree = "<group>";
+		};
+		B0F9E3982B8291AF00C08FD0 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				B0F9E3992B8291AF00C08FD0 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		B0F9E3A22B8291AF00C08FD0 /* RealFlowTests */ = {
+			isa = PBXGroup;
+			children = (
+				B0F9E3A32B8291AF00C08FD0 /* RealFlowTests.swift */,
+			);
+			path = RealFlowTests;
+			sourceTree = "<group>";
+		};
+		B0F9E3AC2B8291AF00C08FD0 /* RealFlowUITests */ = {
+			isa = PBXGroup;
+			children = (
+				B0F9E3AD2B8291AF00C08FD0 /* RealFlowUITests.swift */,
+				B0F9E3AF2B8291AF00C08FD0 /* RealFlowUITestsLaunchTests.swift */,
+			);
+			path = RealFlowUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B0F9E38E2B8291AE00C08FD0 /* RealFlow */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B0F9E3B32B8291AF00C08FD0 /* Build configuration list for PBXNativeTarget "RealFlow" */;
+			buildPhases = (
+				B0F9E38B2B8291AE00C08FD0 /* Sources */,
+				B0F9E38C2B8291AE00C08FD0 /* Frameworks */,
+				B0F9E38D2B8291AE00C08FD0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RealFlow;
+			productName = RealFlow;
+			productReference = B0F9E38F2B8291AE00C08FD0 /* RealFlow.app */;
+			productType = "com.apple.product-type.application";
+		};
+		B0F9E39E2B8291AF00C08FD0 /* RealFlowTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B0F9E3B62B8291AF00C08FD0 /* Build configuration list for PBXNativeTarget "RealFlowTests" */;
+			buildPhases = (
+				B0F9E39B2B8291AF00C08FD0 /* Sources */,
+				B0F9E39C2B8291AF00C08FD0 /* Frameworks */,
+				B0F9E39D2B8291AF00C08FD0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B0F9E3A12B8291AF00C08FD0 /* PBXTargetDependency */,
+			);
+			name = RealFlowTests;
+			productName = RealFlowTests;
+			productReference = B0F9E39F2B8291AF00C08FD0 /* RealFlowTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		B0F9E3A82B8291AF00C08FD0 /* RealFlowUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B0F9E3B92B8291AF00C08FD0 /* Build configuration list for PBXNativeTarget "RealFlowUITests" */;
+			buildPhases = (
+				B0F9E3A52B8291AF00C08FD0 /* Sources */,
+				B0F9E3A62B8291AF00C08FD0 /* Frameworks */,
+				B0F9E3A72B8291AF00C08FD0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B0F9E3AB2B8291AF00C08FD0 /* PBXTargetDependency */,
+			);
+			name = RealFlowUITests;
+			productName = RealFlowUITests;
+			productReference = B0F9E3A92B8291AF00C08FD0 /* RealFlowUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B0F9E3872B8291AE00C08FD0 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1520;
+				LastUpgradeCheck = 1520;
+				TargetAttributes = {
+					B0F9E38E2B8291AE00C08FD0 = {
+						CreatedOnToolsVersion = 15.2;
+					};
+					B0F9E39E2B8291AF00C08FD0 = {
+						CreatedOnToolsVersion = 15.2;
+						TestTargetID = B0F9E38E2B8291AE00C08FD0;
+					};
+					B0F9E3A82B8291AF00C08FD0 = {
+						CreatedOnToolsVersion = 15.2;
+						TestTargetID = B0F9E38E2B8291AE00C08FD0;
+					};
+				};
+			};
+			buildConfigurationList = B0F9E38A2B8291AE00C08FD0 /* Build configuration list for PBXProject "RealFlow" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = B0F9E3862B8291AE00C08FD0;
+			productRefGroup = B0F9E3902B8291AE00C08FD0 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B0F9E38E2B8291AE00C08FD0 /* RealFlow */,
+				B0F9E39E2B8291AF00C08FD0 /* RealFlowTests */,
+				B0F9E3A82B8291AF00C08FD0 /* RealFlowUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B0F9E38D2B8291AE00C08FD0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B0F9E39A2B8291AF00C08FD0 /* Preview Assets.xcassets in Resources */,
+				B0F9E3972B8291AF00C08FD0 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B0F9E39D2B8291AF00C08FD0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B0F9E3A72B8291AF00C08FD0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B0F9E38B2B8291AE00C08FD0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B0F9E3952B8291AE00C08FD0 /* ContentView.swift in Sources */,
+				B0F9E3932B8291AE00C08FD0 /* RealFlowApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B0F9E39B2B8291AF00C08FD0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B0F9E3A42B8291AF00C08FD0 /* RealFlowTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B0F9E3A52B8291AF00C08FD0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B0F9E3B02B8291AF00C08FD0 /* RealFlowUITestsLaunchTests.swift in Sources */,
+				B0F9E3AE2B8291AF00C08FD0 /* RealFlowUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B0F9E3A12B8291AF00C08FD0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B0F9E38E2B8291AE00C08FD0 /* RealFlow */;
+			targetProxy = B0F9E3A02B8291AF00C08FD0 /* PBXContainerItemProxy */;
+		};
+		B0F9E3AB2B8291AF00C08FD0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B0F9E38E2B8291AE00C08FD0 /* RealFlow */;
+			targetProxy = B0F9E3AA2B8291AF00C08FD0 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		B0F9E3B12B8291AF00C08FD0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		B0F9E3B22B8291AF00C08FD0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B0F9E3B42B8291AF00C08FD0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"RealFlow/Preview Content\"";
+				DEVELOPMENT_TEAM = RA8G3AGA7F;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.aranali.RealFlow;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		B0F9E3B52B8291AF00C08FD0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"RealFlow/Preview Content\"";
+				DEVELOPMENT_TEAM = RA8G3AGA7F;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.aranali.RealFlow;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		B0F9E3B72B8291AF00C08FD0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = RA8G3AGA7F;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.aranali.RealFlowTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RealFlow.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/RealFlow";
+			};
+			name = Debug;
+		};
+		B0F9E3B82B8291AF00C08FD0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = RA8G3AGA7F;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.aranali.RealFlowTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RealFlow.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/RealFlow";
+			};
+			name = Release;
+		};
+		B0F9E3BA2B8291AF00C08FD0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = RA8G3AGA7F;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.aranali.RealFlowUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = RealFlow;
+			};
+			name = Debug;
+		};
+		B0F9E3BB2B8291AF00C08FD0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = RA8G3AGA7F;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.aranali.RealFlowUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = RealFlow;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B0F9E38A2B8291AE00C08FD0 /* Build configuration list for PBXProject "RealFlow" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B0F9E3B12B8291AF00C08FD0 /* Debug */,
+				B0F9E3B22B8291AF00C08FD0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B0F9E3B32B8291AF00C08FD0 /* Build configuration list for PBXNativeTarget "RealFlow" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B0F9E3B42B8291AF00C08FD0 /* Debug */,
+				B0F9E3B52B8291AF00C08FD0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B0F9E3B62B8291AF00C08FD0 /* Build configuration list for PBXNativeTarget "RealFlowTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B0F9E3B72B8291AF00C08FD0 /* Debug */,
+				B0F9E3B82B8291AF00C08FD0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B0F9E3B92B8291AF00C08FD0 /* Build configuration list for PBXNativeTarget "RealFlowUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B0F9E3BA2B8291AF00C08FD0 /* Debug */,
+				B0F9E3BB2B8291AF00C08FD0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B0F9E3872B8291AE00C08FD0 /* Project object */;
+}
