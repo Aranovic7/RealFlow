@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		B0216E9D2B83C7BC0071DFB6 /* LoginScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0216E9C2B83C7BC0071DFB6 /* LoginScreen.swift */; };
+		B0216E9F2B83D0750071DFB6 /* RegisterScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0216E9E2B83D0750071DFB6 /* RegisterScreen.swift */; };
 		B0F9E3932B8291AE00C08FD0 /* RealFlowApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0F9E3922B8291AE00C08FD0 /* RealFlowApp.swift */; };
 		B0F9E3952B8291AE00C08FD0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0F9E3942B8291AE00C08FD0 /* ContentView.swift */; };
 		B0F9E3972B8291AF00C08FD0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B0F9E3962B8291AF00C08FD0 /* Assets.xcassets */; };
@@ -36,6 +37,7 @@
 
 /* Begin PBXFileReference section */
 		B0216E9C2B83C7BC0071DFB6 /* LoginScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScreen.swift; sourceTree = "<group>"; };
+		B0216E9E2B83D0750071DFB6 /* RegisterScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterScreen.swift; sourceTree = "<group>"; };
 		B0F9E38F2B8291AE00C08FD0 /* RealFlow.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RealFlow.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B0F9E3922B8291AE00C08FD0 /* RealFlowApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealFlowApp.swift; sourceTree = "<group>"; };
 		B0F9E3942B8291AE00C08FD0 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -100,6 +102,7 @@
 			isa = PBXGroup;
 			children = (
 				B0216E9C2B83C7BC0071DFB6 /* LoginScreen.swift */,
+				B0216E9E2B83D0750071DFB6 /* RegisterScreen.swift */,
 			);
 			path = UnAuthenticated;
 			sourceTree = "<group>";
@@ -292,6 +295,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B0216E9F2B83D0750071DFB6 /* RegisterScreen.swift in Sources */,
 				B0F9E3952B8291AE00C08FD0 /* ContentView.swift in Sources */,
 				B0F9E3932B8291AE00C08FD0 /* RealFlowApp.swift in Sources */,
 				B0216E9D2B83C7BC0071DFB6 /* LoginScreen.swift in Sources */,
