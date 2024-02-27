@@ -9,8 +9,8 @@ import SwiftUI
 
 struct RegisterScreen: View {
     
-    @State var usernameInput: String
-    @State var passwordInput: String
+    @State var registerUsernameInput: String
+    @State var registerPasswordInput: String
     
     @State var repeatPasswordInput: String
     var body: some View {
@@ -26,14 +26,14 @@ struct RegisterScreen: View {
                 
                 Spacer()
                 
-                TextField("Username", text: $usernameInput)
+                TextField("Username", text: $registerUsernameInput)
                     .padding(10)
                     .background(Color.gray.opacity(0.2))
                     .cornerRadius(8)
                     .padding(.horizontal)
                     .padding()
                 
-                TextField("Password", text: $passwordInput)
+                TextField("Password", text: $registerPasswordInput)
                     .padding(10)
                     .background(Color.gray.opacity(0.2))
                     .cornerRadius(8)
@@ -59,6 +59,7 @@ struct RegisterScreen: View {
                 
                 Button(action: {
                     print("Button 'create account' was pressed")
+                    FirebaseManager.registerUser(registerUsernameInput: registerUsernameInput, registerPasswordInput: registerPasswordInput, repeatPasswordInput: repeatPasswordInput)
                 }, label: {
                     Text("Create account")
                         .bold()
@@ -79,5 +80,5 @@ struct RegisterScreen: View {
 }
 
 #Preview {
-    RegisterScreen(usernameInput: "", passwordInput: "", repeatPasswordInput: "")
+    RegisterScreen(registerUsernameInput: "", registerPasswordInput: "", repeatPasswordInput: "")
 }
