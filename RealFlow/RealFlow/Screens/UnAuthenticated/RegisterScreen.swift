@@ -47,6 +47,14 @@ struct RegisterScreen: View {
                     .padding(.horizontal)
                     .padding()
                 
+              
+                
+                Text("Already have an account? Sign in")
+                    .foregroundStyle(.blue)
+                    .onTapGesture {
+                        print("Go back to LoginScreen")
+                    }
+                
                 Spacer()
                 
                 Button(action: {
@@ -62,13 +70,9 @@ struct RegisterScreen: View {
                         .padding()
                 })
                 
-                Spacer()
+               
                 
-                Text("Already have an account? Sign in")
-                    .foregroundStyle(.blue)
-                    .onTapGesture {
-                        print("Go back to LoginScreen")
-                    }
+                
             }
         }
     }
