@@ -46,6 +46,7 @@ struct LoginScreen: View {
                 
                 Button(action: {
                     print("Button 'sign in' was pressed")
+                    FirebaseManager.login(usernameInput: usernameInput, passwordInput: passwordInput)
                 }, label: {
                     Text("Sign in")
                         .bold()

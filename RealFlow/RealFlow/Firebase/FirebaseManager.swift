@@ -26,6 +26,17 @@ class FirebaseManager {
                 // Här kan du meddela användaren om att lösenorden inte matchar
             }
         }
+    
+   static func login(usernameInput: String, passwordInput: String) {
+        Auth.auth().signIn(withEmail: usernameInput, password: passwordInput) { authResult, error in
+            if let error = error {
+                print("Failed to log in: \(error)")
+            } else {
+                print("Log in success")
+            }
+            
+        }
+    }
     }
     
 
