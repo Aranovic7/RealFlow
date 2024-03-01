@@ -11,6 +11,7 @@ struct LoginScreen: View {
     
     @State var usernameInput: String
     @State var passwordInput: String
+    @State var navigateToRegisterScreen: Bool = false
     
     var body: some View {
         VStack{
@@ -52,7 +53,7 @@ struct LoginScreen: View {
                         .bold()
                         .font(.title2)
                         .foregroundStyle(.white)
-                        .frame(width: 250, height: 50)
+                        .frame(width: 250, height: 40)
                         .background(Color.black)
                         .clipShape(.rect(cornerRadius: 10))
                 })
@@ -63,12 +64,14 @@ struct LoginScreen: View {
                 
                 Button(action: {
                     print("Button 'register' was pressed")
+                    navigateToRegisterScreen = true
+                    
                 }, label: {
                     Text("Register")
                         .bold()
                         .font(.title2)
                         .foregroundStyle(.white)
-                        .frame(width: 250, height: 50)
+                        .frame(width: 250, height: 40)
                         .background(Color.black)
                         .clipShape(.rect(cornerRadius: 10))
                        
@@ -79,6 +82,10 @@ struct LoginScreen: View {
                 
                 Text("Made by Aran Ali")
                   
+            }
+            
+            NavigationLink(destination: RegisterScreen(registerUsernameInput: "", registerPasswordInput: "", repeatPasswordInput: ""), isActive: $navigateToRegisterScreen) {
+                EmptyView()
             }
            
         

@@ -12,6 +12,10 @@
 		B0C12B642B8E247F00B766B2 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B0C12B632B8E247F00B766B2 /* GoogleService-Info.plist */; };
 		B0C12B682B8E3A7100B766B2 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = B0C12B672B8E3A7100B766B2 /* FirebaseAuth */; };
 		B0C12B6A2B8E3D7F00B766B2 /* FirebaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0C12B692B8E3D7F00B766B2 /* FirebaseManager.swift */; };
+		B0F44BB82B8F843900DF2A21 /* MessagesScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0F44BB72B8F843900DF2A21 /* MessagesScreen.swift */; };
+		B0F44BBC2B8F872B00DF2A21 /* TopNavBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0F44BBB2B8F872B00DF2A21 /* TopNavBar.swift */; };
+		B0F44BBE2B8F934500DF2A21 /* NewMessagesBtn.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0F44BBD2B8F934500DF2A21 /* NewMessagesBtn.swift */; };
+		B0F44BC02B8F984300DF2A21 /* BottomNavBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0F44BBF2B8F984300DF2A21 /* BottomNavBar.swift */; };
 		B0F9E3932B8291AE00C08FD0 /* RealFlowApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0F9E3922B8291AE00C08FD0 /* RealFlowApp.swift */; };
 		B0F9E3952B8291AE00C08FD0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0F9E3942B8291AE00C08FD0 /* ContentView.swift */; };
 		B0F9E3972B8291AF00C08FD0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B0F9E3962B8291AF00C08FD0 /* Assets.xcassets */; };
@@ -43,6 +47,10 @@
 		B0216E9E2B83D0750071DFB6 /* RegisterScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterScreen.swift; sourceTree = "<group>"; };
 		B0C12B632B8E247F00B766B2 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		B0C12B692B8E3D7F00B766B2 /* FirebaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseManager.swift; sourceTree = "<group>"; };
+		B0F44BB72B8F843900DF2A21 /* MessagesScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesScreen.swift; sourceTree = "<group>"; };
+		B0F44BBB2B8F872B00DF2A21 /* TopNavBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopNavBar.swift; sourceTree = "<group>"; };
+		B0F44BBD2B8F934500DF2A21 /* NewMessagesBtn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewMessagesBtn.swift; sourceTree = "<group>"; };
+		B0F44BBF2B8F984300DF2A21 /* BottomNavBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomNavBar.swift; sourceTree = "<group>"; };
 		B0F9E38F2B8291AE00C08FD0 /* RealFlow.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RealFlow.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B0F9E3922B8291AE00C08FD0 /* RealFlowApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealFlowApp.swift; sourceTree = "<group>"; };
 		B0F9E3942B8291AE00C08FD0 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -84,6 +92,9 @@
 		B0216E982B83C73A0071DFB6 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				B0F44BBB2B8F872B00DF2A21 /* TopNavBar.swift */,
+				B0F44BBD2B8F934500DF2A21 /* NewMessagesBtn.swift */,
+				B0F44BBF2B8F984300DF2A21 /* BottomNavBar.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -109,6 +120,7 @@
 			children = (
 				B0216E9C2B83C7BC0071DFB6 /* LoginScreen.swift */,
 				B0216E9E2B83D0750071DFB6 /* RegisterScreen.swift */,
+				B0F44BB72B8F843900DF2A21 /* MessagesScreen.swift */,
 			);
 			path = UnAuthenticated;
 			sourceTree = "<group>";
@@ -328,9 +340,13 @@
 			files = (
 				B0216E9F2B83D0750071DFB6 /* RegisterScreen.swift in Sources */,
 				B0F9E3952B8291AE00C08FD0 /* ContentView.swift in Sources */,
+				B0F44BC02B8F984300DF2A21 /* BottomNavBar.swift in Sources */,
 				B0C12B6A2B8E3D7F00B766B2 /* FirebaseManager.swift in Sources */,
 				B0F9E3932B8291AE00C08FD0 /* RealFlowApp.swift in Sources */,
 				B0216E9D2B83C7BC0071DFB6 /* LoginScreen.swift in Sources */,
+				B0F44BBE2B8F934500DF2A21 /* NewMessagesBtn.swift in Sources */,
+				B0F44BBC2B8F872B00DF2A21 /* TopNavBar.swift in Sources */,
+				B0F44BB82B8F843900DF2A21 /* MessagesScreen.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

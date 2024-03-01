@@ -17,14 +17,15 @@ struct RegisterScreen: View {
         
         VStack{
             
-            VStack{
+           
                 
                 Text("Create your account")
                     .font(.title)
                     .bold()
                     .padding()
-                
-                Spacer()
+        
+             
+              
                 
                 TextField("Username", text: $registerUsernameInput)
                     .padding(10)
@@ -71,10 +72,10 @@ struct RegisterScreen: View {
                         .padding()
                 })
                 
-               
+               Spacer()
                 
                 
-            }
+            
         }
     }
 }
