@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		B0216E9D2B83C7BC0071DFB6 /* LoginScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0216E9C2B83C7BC0071DFB6 /* LoginScreen.swift */; };
 		B0216E9F2B83D0750071DFB6 /* RegisterScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0216E9E2B83D0750071DFB6 /* RegisterScreen.swift */; };
+		B05801EE2B9A4DAA00880227 /* SplashScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = B05801ED2B9A4DAA00880227 /* SplashScreen.swift */; };
 		B0C12B642B8E247F00B766B2 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B0C12B632B8E247F00B766B2 /* GoogleService-Info.plist */; };
 		B0C12B682B8E3A7100B766B2 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = B0C12B672B8E3A7100B766B2 /* FirebaseAuth */; };
 		B0C12B6A2B8E3D7F00B766B2 /* FirebaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0C12B692B8E3D7F00B766B2 /* FirebaseManager.swift */; };
@@ -45,6 +46,7 @@
 /* Begin PBXFileReference section */
 		B0216E9C2B83C7BC0071DFB6 /* LoginScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScreen.swift; sourceTree = "<group>"; };
 		B0216E9E2B83D0750071DFB6 /* RegisterScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterScreen.swift; sourceTree = "<group>"; };
+		B05801ED2B9A4DAA00880227 /* SplashScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreen.swift; sourceTree = "<group>"; };
 		B0C12B632B8E247F00B766B2 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		B0C12B692B8E3D7F00B766B2 /* FirebaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseManager.swift; sourceTree = "<group>"; };
 		B0F44BB72B8F843900DF2A21 /* MessagesScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesScreen.swift; sourceTree = "<group>"; };
@@ -121,6 +123,7 @@
 				B0216E9C2B83C7BC0071DFB6 /* LoginScreen.swift */,
 				B0216E9E2B83D0750071DFB6 /* RegisterScreen.swift */,
 				B0F44BB72B8F843900DF2A21 /* MessagesScreen.swift */,
+				B05801ED2B9A4DAA00880227 /* SplashScreen.swift */,
 			);
 			path = UnAuthenticated;
 			sourceTree = "<group>";
@@ -338,6 +341,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B05801EE2B9A4DAA00880227 /* SplashScreen.swift in Sources */,
 				B0216E9F2B83D0750071DFB6 /* RegisterScreen.swift in Sources */,
 				B0F9E3952B8291AE00C08FD0 /* ContentView.swift in Sources */,
 				B0F44BC02B8F984300DF2A21 /* BottomNavBar.swift in Sources */,

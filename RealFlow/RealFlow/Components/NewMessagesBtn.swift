@@ -24,6 +24,7 @@ struct NewMessagesBtn: View {
             .clipShape(.rect(cornerRadius: 32))
             .padding(.horizontal)
             .shadow(radius: 15)
+            .padding(.bottom)
             
             
         })

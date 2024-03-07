@@ -39,7 +39,10 @@ struct MessagesScreen: View {
            
         }.overlay(
             NewMessagesBtn(), alignment: .bottom
+                
             )
+        
+        BottomNavBar()
 
     
     }
