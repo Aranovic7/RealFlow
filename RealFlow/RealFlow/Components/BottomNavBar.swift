@@ -8,6 +8,11 @@
 import SwiftUI
 
 struct BottomNavBar: View {
+    
+    @State var isMessagesSelected: Bool = false
+    @State var isProfileSelected: Bool = false
+    @State var isSettingsSelected: Bool = false
+    
     var body: some View {
         
         VStack{
@@ -19,12 +24,14 @@ struct BottomNavBar: View {
                 Spacer()
                 
                 Button(action: {
-                    print("")
+                    isMessagesSelected.toggle()
+                  
                 }, label: {
                     VStack(alignment: .center, spacing: 4){
                         
-                        Image(systemName: "bubble.left.fill")
+                        Image(systemName: isMessagesSelected ? "bubble.left.fill" : "bubble.left")
                             .font(.system(size: 25))
+                            
                         
                         Text("Messages")
                             .font(.system(size: 11))
@@ -36,11 +43,11 @@ struct BottomNavBar: View {
                 Spacer()
                 
                 Button(action: {
-                    print("")
+                    isProfileSelected.toggle()
                 }, label: {
                     VStack(alignment: .center, spacing: 4){
                         
-                        Image(systemName: "person")
+                        Image(systemName: isProfileSelected ? "person" : "person.fill")
                             .font(.system(size: 25))
                         
                         Text("Profile")
@@ -53,7 +60,7 @@ struct BottomNavBar: View {
                 Spacer()
                 
                 Button(action: {
-                    print("")
+                    isSettingsSelected.toggle()
                 }, label: {
                     VStack(alignment: .center, spacing: 4){
                         

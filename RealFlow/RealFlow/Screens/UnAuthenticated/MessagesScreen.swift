@@ -31,7 +31,7 @@ struct MessagesScreen: View {
                                 .font(.system(size: 14, weight: .semibold))
                         }
                         Divider()
-                            .padding(.vertical, 8)
+                        .padding(.vertical, 8)
                     } .padding(.horizontal)
                    
                 }
