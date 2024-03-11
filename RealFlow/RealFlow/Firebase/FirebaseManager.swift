@@ -7,6 +7,7 @@
 
 import Foundation
 import Firebase
+import FirebaseFirestore
 
 class FirebaseManager {
     
@@ -19,6 +20,30 @@ class FirebaseManager {
                     } else {
                         print("Användare registrerad framgångsrikt")
                         // Här kan du navigera till nästa skärm eller utföra andra åtgärder efter framgångsrik registrering
+                        
+                        // lagra användarinformation i firestore
+                        guard let userID = authResult?.user.uid else {
+                            print("Användarens UID saknas")
+                            return
+                        }
+                        
+                        let userData = [
+                            "username": registerUsernameInput,
+                            "password": registerPasswordInput,
+                            "createdAt": FieldValue.serverTimestamp()
+                            // lägg till andra användarattribut här om det behövs
+                        ]
+                        
+                        let db = Firestore.firestore()
+                        db.collection("users").document(userID).setData(userData) { error in
+                            if let error = error {
+                                print("Fel vid uppladdning av användardata till Firestore: \(error)")
+                            } else {
+                                print("Användardata uppladdad till Firestore")
+                            }
+                            
+                        }
+                        
                     }
                 }
             } else {

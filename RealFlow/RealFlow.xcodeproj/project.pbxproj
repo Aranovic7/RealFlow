@@ -13,6 +13,7 @@
 		B0C12B642B8E247F00B766B2 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B0C12B632B8E247F00B766B2 /* GoogleService-Info.plist */; };
 		B0C12B682B8E3A7100B766B2 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = B0C12B672B8E3A7100B766B2 /* FirebaseAuth */; };
 		B0C12B6A2B8E3D7F00B766B2 /* FirebaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0C12B692B8E3D7F00B766B2 /* FirebaseManager.swift */; };
+		B0DD83F42B9F993C0098A2A0 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = B0DD83F32B9F993C0098A2A0 /* FirebaseFirestore */; };
 		B0F44BB82B8F843900DF2A21 /* MessagesScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0F44BB72B8F843900DF2A21 /* MessagesScreen.swift */; };
 		B0F44BBC2B8F872B00DF2A21 /* TopNavBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0F44BBB2B8F872B00DF2A21 /* TopNavBar.swift */; };
 		B0F44BBE2B8F934500DF2A21 /* NewMessagesBtn.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0F44BBD2B8F934500DF2A21 /* NewMessagesBtn.swift */; };
@@ -71,6 +72,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B0C12B682B8E3A7100B766B2 /* FirebaseAuth in Frameworks */,
+				B0DD83F42B9F993C0098A2A0 /* FirebaseFirestore in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -222,6 +224,7 @@
 			name = RealFlow;
 			packageProductDependencies = (
 				B0C12B672B8E3A7100B766B2 /* FirebaseAuth */,
+				B0DD83F32B9F993C0098A2A0 /* FirebaseFirestore */,
 			);
 			productName = RealFlow;
 			productReference = B0F9E38F2B8291AE00C08FD0 /* RealFlow.app */;
@@ -697,6 +700,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = B0C12B652B8E386100B766B2 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseAuth;
+		};
+		B0DD83F32B9F993C0098A2A0 /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B0C12B652B8E386100B766B2 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
