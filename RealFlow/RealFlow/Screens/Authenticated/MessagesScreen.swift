@@ -41,10 +41,7 @@ struct MessagesScreen: View {
             NewMessagesBtn(), alignment: .bottom
                 
             )
-        
-        BottomNavBar()
 
-    
     }
 }
 
