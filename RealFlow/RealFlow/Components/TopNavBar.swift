@@ -29,29 +29,29 @@ struct TopNavBar: View {
                     }
                 }
                 Spacer()
-                Button {
-                    shouldShowLogOutOption.toggle()
-                } label: {
-                    Image(systemName: "gear")
-                        .font(.system(size: 24, weight: .bold))
-                        .foregroundStyle(Color.black)
-                }
+//                Button {
+//                    shouldShowLogOutOption.toggle()
+//                } label: {
+//                    Image(systemName: "gear")
+//                        .font(.system(size: 24, weight: .bold))
+//                        .foregroundStyle(Color.black)
+//                }
                 
             }
             .padding()
-            .actionSheet(isPresented: $shouldShowLogOutOption) {
-                ActionSheet(
-                    title: Text("Settings"),
-                    message: Text("What do you want to do?"),
-                    buttons: [
-                        .destructive(Text("Sign Out")) {
-                            // Hantera utloggning
-                            print("handle sign out")
-                        },
-                        .cancel()
-                    ]
-                )
-            }
+//            .actionSheet(isPresented: $shouldShowLogOutOption) {
+//                ActionSheet(
+//                    title: Text("Settings"),
+//                    message: Text("What do you want to do?"),
+//                    buttons: [
+//                        .destructive(Text("Sign Out")) {
+//                            // Hantera utloggning
+//                            print("handle sign out")
+//                        },
+//                        .cancel()
+//                    ]
+//                )
+//            }
         }
     }
 }
