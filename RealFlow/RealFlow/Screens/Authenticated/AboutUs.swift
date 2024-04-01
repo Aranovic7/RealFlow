@@ -9,7 +9,23 @@ import SwiftUI
 
 struct AboutUs: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack{
+            Text("About us")
+                .font(.title)
+                .bold()
+                .padding()
+            
+            Spacer()
+            
+            Text("Detta är en messenger app i realtid för att analysera hur teknisk och snabb kommunikation påverkar människans tydlighet i att kommunicera på. Därför också som namnet på appen är RealFlow Messaging")
+                .padding()
+            
+            Spacer()
+
+            
+            
+    
+        }
     }
 }
 

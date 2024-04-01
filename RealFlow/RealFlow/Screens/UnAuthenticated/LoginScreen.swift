@@ -9,9 +9,9 @@ import SwiftUI
 
 struct LoginScreen: View {
     
-    @State var usernameInput: String
-    @State var passwordInput: String
     @State var navigateToRegisterScreen: Bool = false
+    
+    @EnvironmentObject var firebaseManager: FirebaseManager
     
     var body: some View {
         VStack{
@@ -31,14 +31,14 @@ struct LoginScreen: View {
                 
                 Spacer()
                 
-                TextField("Username", text: $usernameInput)
+                TextField("Username", text: $firebaseManager.usernameInput)
                     .padding(10)
                     .background(Color.gray.opacity(0.2))
                     .cornerRadius(8)
                     .padding(.horizontal)
                     .padding()
                 
-                TextField("Password", text: $passwordInput)
+                TextField("Password", text: $firebaseManager.passwordInput)
                     .padding(10)
                     .background(Color.gray.opacity(0.2))
                     .cornerRadius(8)
@@ -47,7 +47,11 @@ struct LoginScreen: View {
                 
                 Button(action: {
                     print("Button 'sign in' was pressed")
-                    FirebaseManager.login(usernameInput: usernameInput, passwordInput: passwordInput)
+                    firebaseManager.login(usernameInput: firebaseManager.usernameInput, passwordInput: firebaseManager.passwordInput)
+                    firebaseManager.fetchUserData()
+                        
+                        
+                    
                 }, label: {
                     Text("Sign in")
                         .bold()
@@ -84,7 +88,7 @@ struct LoginScreen: View {
                   
             }
             
-            NavigationLink(destination: RegisterScreen(registerUsernameInput: "", registerPasswordInput: "", repeatPasswordInput: ""), isActive: $navigateToRegisterScreen) {
+            NavigationLink(destination: RegisterScreen(), isActive: $navigateToRegisterScreen) {
                 EmptyView()
             }
            
@@ -94,5 +98,5 @@ struct LoginScreen: View {
 }
 
 #Preview {
-    LoginScreen(usernameInput: "", passwordInput: "")
+    LoginScreen()
 }

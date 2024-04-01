@@ -19,9 +19,11 @@ class AppDelegate: NSObject, UIApplicationDelegate {
 @main
 struct RealFlowApp: App {
     @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
+   
     var body: some Scene {
         WindowGroup {
             ContentView()
         }
+        
     }
 }

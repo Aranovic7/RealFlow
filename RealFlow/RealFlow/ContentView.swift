@@ -9,11 +9,11 @@ import SwiftUI
 
 struct ContentView: View {
     
-    @State var isLoggedIn: Bool = true
+    @StateObject var firebaseManager = FirebaseManager()
     
     var body: some View {
         
-        if isLoggedIn {
+        if firebaseManager.isLoggedIn {
             TabView {
        
                     MessagesScreen()
@@ -36,17 +36,18 @@ struct ContentView: View {
                             Image(systemName: "gear")
                             Text("Settings")
                         }
-                }
+            }.environmentObject(firebaseManager)
                 
             
         } else {
             NavigationStack{
-                LoginScreen(usernameInput: "", passwordInput: "")
-            }
+                LoginScreen()
+            }.environmentObject(firebaseManager)
         }
     }
 }
 
 #Preview {
     ContentView()
+        .environmentObject(FirebaseManager())
 }

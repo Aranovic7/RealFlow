@@ -9,7 +9,19 @@ import SwiftUI
 
 struct NotificationsScreen: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        
+        Text("Notifications")
+            .font(.title)
+            .bold()
+        
+        Form{
+               
+                Toggle(isOn: .constant(true), label: {
+                    Text("Notifications")
+                })
+            
+            
+        }
     }
 }
 

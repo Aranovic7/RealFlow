@@ -1,18 +1,26 @@
-//
-//  LanguageSettings.swift
-//  RealFlow
-//
-//  Created by Aran Ali on 2024-03-18.
-//
-
 import SwiftUI
 
 struct LanguageSettings: View {
+    
+    @State private var selectedLanguageIndex = 0
+    
+    let languages = ["🇬🇧 English", "🇪🇸 Espanol", "🇸🇪 Svenska", "🇫🇷 France", "🇩🇪 Deutsch"]
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        List {
+            Picker("Select a language", selection: $selectedLanguageIndex) {
+                ForEach(0..<languages.count) { index in
+                    Text(languages[index])
+                        .tag(index)
+                }
+            }
+            .pickerStyle(.inline)
+            .padding()
+        }
     }
 }
 
 #Preview {
     LanguageSettings()
 }
+

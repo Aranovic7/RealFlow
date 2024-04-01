@@ -7,7 +7,6 @@
 
 import SwiftUI
 
-
 struct SettingsScreen: View {
     
     @State var navigateToAccount: Bool = false
@@ -16,35 +15,20 @@ struct SettingsScreen: View {
     @State var navigateToPrivacy: Bool = false
     @State var navigateToHelp: Bool = false
     @State var navigateToAbout: Bool = false
+    @EnvironmentObject var firebaseManager: FirebaseManager
     
     var body: some View {
         
         VStack{
+            
             Text("Settings")
                 .font(.title)
                 .bold()
                 .padding()
             
-            HStack{
-                Image(systemName: "person.fill")
-                    .resizable()
-                    .aspectRatio(contentMode: .fill)
-                    .frame(width: 80, height: 80)
-                    .clipShape(Circle())
-                    .padding(.trailing, 25)
-                    
-                
-                VStack(alignment: .leading){
-                    Text("NAME LASTNAME")
-                    Text("@Username")
-                }
-               
-            } .padding(.bottom)
-            
-            
             ScrollView{
                 
-            VStack (spacing: 25) {
+            VStack (spacing: 30) {
                 
                 HStack{
                     Text("Allmänt:")
@@ -66,7 +50,7 @@ struct SettingsScreen: View {
                         
                         Spacer()
                         
-                        Image(systemName: "chevron.right")
+                        Image(systemName: "arrow.right")
                             .padding(.trailing, 40)
                         
                     } 
@@ -83,7 +67,7 @@ struct SettingsScreen: View {
                         
                         Spacer()
                         
-                        Image(systemName: "chevron.right")
+                        Image(systemName: "arrow.right")
                             .padding(.trailing, 40)
                         
                     }
@@ -100,42 +84,13 @@ struct SettingsScreen: View {
                         
                         Spacer()
                         
-                        Image(systemName: "chevron.right")
+                        Image(systemName: "arrow.right")
                             .padding(.trailing, 40)
                         
                     }
                     .onTapGesture {
                         navigateToApperance = true
                     }
-                
-                    Divider()
-                        .frame(width: 315)
-                
-                HStack{
-                    Text("Meddelanden:")
-                        .bold()
-                        .font(.title3)
-                        .padding(.leading, 40)
-                    Spacer()
-                }
-                    
-                    HStack{
-                        
-                        Image(systemName: "speaker.wave.2")
-                            .padding(.leading, 40)
-                        
-                        Text("Ljudinställningar")
-                        
-                        Spacer()
-                        
-                        Image(systemName: "chevron.right")
-                            .padding(.trailing, 40)
-                        
-                    }
-                    .onTapGesture {
-                        navigateToPrivacy = true
-                    }
-                
                 
                     Divider()
                         .frame(width: 315)
@@ -157,7 +112,7 @@ struct SettingsScreen: View {
                         
                         Spacer()
                         
-                        Image(systemName: "chevron.right")
+                        Image(systemName: "arrow.right")
                             .padding(.trailing, 40)
                         
                     }
@@ -174,7 +129,7 @@ struct SettingsScreen: View {
                         
                         Spacer()
                         
-                        Image(systemName: "chevron.right")
+                        Image(systemName: "arrow.right")
                             .padding(.trailing, 40)
                         
                     }
@@ -183,8 +138,14 @@ struct SettingsScreen: View {
                     }
                 
                 HStack{
-                    Text("Sign out")
-                    Image(systemName: "door.left.hand.open")
+                    Button(action: {
+                        firebaseManager.logout()
+                        print("signing out...")
+                    }) {
+                        Text("Sign out")
+                        Image(systemName: "door.left.hand.open")
+                    }
+                    
                 } 
                 .foregroundStyle(Color.red)
                 .padding()
@@ -193,42 +154,6 @@ struct SettingsScreen: View {
                 }
             }
         }
-       
-//        Form {
-//            
-//            Section(header: Text("Notifications")) {
-//                Toggle(isOn: .constant(true), label: {
-//                    Text("Enable notifications")
-//                })
-//                Toggle(isOn: .constant(true), label: {
-//                    Text("Få nyhetsbrev från RealFlow")
-//                })
-//            }
-//            
-//            Section(header: Text("Plats")) {
-//                Toggle(isOn: .constant(false), label: {
-//                    Text("Tillåt åtkomst för platsinfo")
-//                })
-//            }
-//            
-//            Section(header: Text("Account")) {
-//                Toggle(isOn: .constant(true), label: {
-//                    Text("Show online status")
-//                })
-//                
-//                HStack{
-//                    Text("Log out")
-//                    Image(systemName: "power")
-//                }  .foregroundStyle(Color.red)
-//            }
-//            
-//            Section(header: Text("Privacy & Security")) {
-//                Toggle(isOn: .constant(true), label: {
-//                    Text("Enable notifications")
-//                })
-//            }
-//                            
-//        }
     }
 }
 

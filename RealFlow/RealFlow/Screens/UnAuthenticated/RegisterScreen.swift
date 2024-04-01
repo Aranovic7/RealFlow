@@ -9,39 +9,47 @@ import SwiftUI
 
 struct RegisterScreen: View {
     
-    @State var registerUsernameInput: String
-    @State var registerPasswordInput: String
+    @EnvironmentObject var firebaseManager: FirebaseManager
     
-    @State var repeatPasswordInput: String
     var body: some View {
         
         VStack{
             
            
-                
                 Text("Create your account")
                     .font(.title)
                     .bold()
                     .padding()
-        
-             
-              
-                
-                TextField("Username", text: $registerUsernameInput)
+            
+            TextField("Firstname", text: $firebaseManager.firstName)
+                    .padding(10)
+                    .background(Color.gray.opacity(0.2))
+                    .cornerRadius(8)
+                    .padding(.horizontal)
+                    .padding()
+            
+            TextField("Lastname", text: $firebaseManager.lastName)
                     .padding(10)
                     .background(Color.gray.opacity(0.2))
                     .cornerRadius(8)
                     .padding(.horizontal)
                     .padding()
                 
-                TextField("Password", text: $registerPasswordInput)
+            TextField("Username", text: $firebaseManager.registerUsernameInput)
                     .padding(10)
                     .background(Color.gray.opacity(0.2))
                     .cornerRadius(8)
                     .padding(.horizontal)
                     .padding()
                 
-                TextField("Repeat password", text: $repeatPasswordInput)
+            TextField("Password", text: $firebaseManager.registerPasswordInput)
+                    .padding(10)
+                    .background(Color.gray.opacity(0.2))
+                    .cornerRadius(8)
+                    .padding(.horizontal)
+                    .padding()
+                
+            TextField("Repeat password", text: $firebaseManager.repeatPasswordInput)
                     .padding(10)
                     .background(Color.gray.opacity(0.2))
                     .cornerRadius(8)
@@ -60,7 +68,7 @@ struct RegisterScreen: View {
                 
                 Button(action: {
                     print("Button 'create account' was pressed")
-                    FirebaseManager.registerUser(registerUsernameInput: registerUsernameInput, registerPasswordInput: registerPasswordInput, repeatPasswordInput: repeatPasswordInput)
+                    firebaseManager.registerUser(registerUsernameInput: firebaseManager.registerUsernameInput, registerPasswordInput: firebaseManager.registerPasswordInput, repeatPasswordInput: firebaseManager.repeatPasswordInput, firstName: firebaseManager.firstName, lastName: firebaseManager.lastName)
                 }, label: {
                     Text("Create account")
                         .bold()
@@ -81,5 +89,5 @@ struct RegisterScreen: View {
 }
 
 #Preview {
-    RegisterScreen(registerUsernameInput: "", registerPasswordInput: "", repeatPasswordInput: "")
+    RegisterScreen()
 }
