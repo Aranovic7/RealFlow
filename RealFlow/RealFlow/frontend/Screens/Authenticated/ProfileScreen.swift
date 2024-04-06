@@ -15,11 +15,22 @@ struct ProfileScreen: View {
         ScrollView{
             VStack{
                 
-                Image("profilepic")
+                AsyncImage(url: firebaseManager.profileImageURL, content: { returnedImage in
+                    returnedImage
+                        .resizable()
+                        .scaledToFill()
+                        .frame(width: 150, height: 150)
+                        .clipShape(Circle())
+                    
+                }, placeholder: {
+                    Image(.maleAvatar)
                         .resizable()
                         .scaledToFit()
                         .frame(width: 150, height: 150)
                         .clipShape(Circle())
+                })
+                
+               
                     
                 Image(systemName: "checkmark.seal.fill")
                     .font(.system(size: 33))
@@ -41,12 +52,15 @@ struct ProfileScreen: View {
                 
                 Text("\(firebaseManager.username ?? "JohnDoe@gmail.com")")
                     .padding()
+                    .font(.headline)
                 
                 Text("This is a text about me. lorem ipsum is a dummy text dummy dummy text")
                     .padding()
                 
                 
                 
+            } .onAppear{
+                firebaseManager.fetchUserData()
             }
            
         }

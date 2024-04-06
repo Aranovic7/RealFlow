@@ -12,7 +12,6 @@ struct RegisterScreen: View {
     
     @EnvironmentObject var firebaseManager: FirebaseManager
     
-    @State var profileImage: UIImage?
     @State var photosPickerItem: PhotosPickerItem?
     
     var body: some View {
@@ -25,7 +24,7 @@ struct RegisterScreen: View {
             
             HStack(spacing: 20){
                 PhotosPicker(selection: $photosPickerItem, matching: .images) {
-                    Image(uiImage: profileImage ?? .maleAvatar)
+                    Image(uiImage: firebaseManager.profileImage ?? .maleAvatar)
                         .resizable()
                         .scaledToFill()
                         .frame(width: 100, height: 100)
@@ -53,7 +52,7 @@ struct RegisterScreen: View {
                     if let photosPickerItem,
                        let data = try? await photosPickerItem.loadTransferable(type: Data.self) {
                         if let image = UIImage(data: data) {
-                            profileImage = image
+                            firebaseManager.profileImage = image
                         }
                     }
                     
@@ -108,9 +107,8 @@ struct RegisterScreen: View {
                 Spacer()
                 
                 Button(action: {
-                    print("Button 'create account' was pressed")
                     
-                    firebaseManager.registerUser(registerUsernameInput: firebaseManager.registerUsernameInput, registerPasswordInput: firebaseManager.registerPasswordInput, repeatPasswordInput: firebaseManager.repeatPasswordInput, firstName: firebaseManager.firstName, lastName: firebaseManager.lastName)
+                    firebaseManager.registerUser(registerUsernameInput: firebaseManager.registerUsernameInput, registerPasswordInput: firebaseManager.registerPasswordInput, repeatPasswordInput: firebaseManager.repeatPasswordInput, firstName: firebaseManager.firstName, lastName: firebaseManager.lastName, profileImage: firebaseManager.profileImage)
                 }, label: {
                     Text("Create account")
                         .bold()

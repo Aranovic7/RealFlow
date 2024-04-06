@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct MessagesScreen: View {
+    @EnvironmentObject var firebaseManager: FirebaseManager
     var body: some View {
         VStack{
             TopNavBar()
@@ -41,6 +42,9 @@ struct MessagesScreen: View {
             NewMessagesBtn(), alignment: .bottom
                 
             )
+//        .onAppear{
+//            firebaseManager.fetchUserData(userEmail: firebaseManager.registerUsernameInput)
+//        }
 
     }
 }

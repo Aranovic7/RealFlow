@@ -10,6 +10,7 @@
 		B0106E432BB0742100C937E7 /* ContactUsScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0106E422BB0742100C937E7 /* ContactUsScreen.swift */; };
 		B0216E9D2B83C7BC0071DFB6 /* LoginScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0216E9C2B83C7BC0071DFB6 /* LoginScreen.swift */; };
 		B0216E9F2B83D0750071DFB6 /* RegisterScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0216E9E2B83D0750071DFB6 /* RegisterScreen.swift */; };
+		B02171EC2BBB618500F4C84D /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = B02171EB2BBB618500F4C84D /* FirebaseStorage */; };
 		B052D6892BA839B5003FA3E6 /* LanguageSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = B052D6882BA839B5003FA3E6 /* LanguageSettings.swift */; };
 		B05801EE2B9A4DAA00880227 /* SplashScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = B05801ED2B9A4DAA00880227 /* SplashScreen.swift */; };
 		B07695D02BA9A4C00086C1D0 /* NotificationsScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = B07695CF2BA9A4C00086C1D0 /* NotificationsScreen.swift */; };
@@ -91,6 +92,7 @@
 			files = (
 				B0C12B682B8E3A7100B766B2 /* FirebaseAuth in Frameworks */,
 				B0DD83F42B9F993C0098A2A0 /* FirebaseFirestore in Frameworks */,
+				B02171EC2BBB618500F4C84D /* FirebaseStorage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -157,6 +159,23 @@
 			path = UnAuthenticated;
 			sourceTree = "<group>";
 		};
+		B08DE4C22BBC813A001F6034 /* frontend */ = {
+			isa = PBXGroup;
+			children = (
+				B0216E982B83C73A0071DFB6 /* Components */,
+				B0216E992B83C77C0071DFB6 /* Screens */,
+			);
+			path = frontend;
+			sourceTree = "<group>";
+		};
+		B08DE4C32BBC8192001F6034 /* backend */ = {
+			isa = PBXGroup;
+			children = (
+				B0C12B6B2B8E3DAC00B766B2 /* Firebase */,
+			);
+			path = backend;
+			sourceTree = "<group>";
+		};
 		B0C12B662B8E3A7100B766B2 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -196,9 +215,8 @@
 		B0F9E3912B8291AE00C08FD0 /* RealFlow */ = {
 			isa = PBXGroup;
 			children = (
-				B0C12B6B2B8E3DAC00B766B2 /* Firebase */,
-				B0216E992B83C77C0071DFB6 /* Screens */,
-				B0216E982B83C73A0071DFB6 /* Components */,
+				B08DE4C32BBC8192001F6034 /* backend */,
+				B08DE4C22BBC813A001F6034 /* frontend */,
 				B0F9E3922B8291AE00C08FD0 /* RealFlowApp.swift */,
 				B0F9E3942B8291AE00C08FD0 /* ContentView.swift */,
 				B0F9E3962B8291AF00C08FD0 /* Assets.xcassets */,
@@ -252,6 +270,7 @@
 			packageProductDependencies = (
 				B0C12B672B8E3A7100B766B2 /* FirebaseAuth */,
 				B0DD83F32B9F993C0098A2A0 /* FirebaseFirestore */,
+				B02171EB2BBB618500F4C84D /* FirebaseStorage */,
 			);
 			productName = RealFlow;
 			productReference = B0F9E38F2B8291AE00C08FD0 /* RealFlow.app */;
@@ -732,6 +751,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		B02171EB2BBB618500F4C84D /* FirebaseStorage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B0C12B652B8E386100B766B2 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseStorage;
+		};
 		B0C12B672B8E3A7100B766B2 /* FirebaseAuth */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = B0C12B652B8E386100B766B2 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
