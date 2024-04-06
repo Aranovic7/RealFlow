@@ -6,20 +6,61 @@
 //
 
 import SwiftUI
+import PhotosUI
 
 struct RegisterScreen: View {
     
     @EnvironmentObject var firebaseManager: FirebaseManager
     
+    @State var profileImage: UIImage?
+    @State var photosPickerItem: PhotosPickerItem?
+    
     var body: some View {
-        
         VStack{
-            
-           
+        
                 Text("Create your account")
                     .font(.title)
                     .bold()
                     .padding()
+            
+            HStack(spacing: 20){
+                PhotosPicker(selection: $photosPickerItem, matching: .images) {
+                    Image(uiImage: profileImage ?? .maleAvatar)
+                        .resizable()
+                        .scaledToFill()
+                        .frame(width: 100, height: 100)
+                        .clipShape(.circle)
+                }
+               
+                
+                VStack(alignment: .leading){
+                    Text("John Doe")
+                        .font(.largeTitle.bold())
+                    
+                    Text("iOS Developer")
+                        .font(.headline)
+                        .foregroundStyle(.secondary)
+                    
+                }
+                
+                Spacer()
+                      
+                     
+            }
+            .padding(.leading, 30)
+            .onChange(of: photosPickerItem) { _, _ in
+                Task {
+                    if let photosPickerItem,
+                       let data = try? await photosPickerItem.loadTransferable(type: Data.self) {
+                        if let image = UIImage(data: data) {
+                            profileImage = image
+                        }
+                    }
+                    
+                    photosPickerItem = nil
+                }
+                
+            }
             
             TextField("Firstname", text: $firebaseManager.firstName)
                     .padding(10)
@@ -68,6 +109,7 @@ struct RegisterScreen: View {
                 
                 Button(action: {
                     print("Button 'create account' was pressed")
+                    
                     firebaseManager.registerUser(registerUsernameInput: firebaseManager.registerUsernameInput, registerPasswordInput: firebaseManager.registerPasswordInput, repeatPasswordInput: firebaseManager.repeatPasswordInput, firstName: firebaseManager.firstName, lastName: firebaseManager.lastName)
                 }, label: {
                     Text("Create account")
