@@ -42,9 +42,6 @@ struct MessagesScreen: View {
             NewMessagesBtn(), alignment: .bottom
                 
             )
-//        .onAppear{
-//            firebaseManager.fetchUserData(userEmail: firebaseManager.registerUsernameInput)
-//        }
 
     }
 }

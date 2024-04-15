@@ -2,20 +2,21 @@ import SwiftUI
 
 struct LanguageSettings: View {
     
-    @State private var selectedLanguageIndex = 0
-    
-    let languages = ["🇬🇧 English", "🇪🇸 Espanol", "🇸🇪 Svenska", "🇫🇷 France", "🇩🇪 Deutsch"]
-    
     var body: some View {
-        List {
-            Picker("Select a language", selection: $selectedLanguageIndex) {
-                ForEach(0..<languages.count) { index in
-                    Text(languages[index])
-                        .tag(index)
+        VStack(spacing: 20) {
+            Text("Language Settings")
+                .font(.title2)
+            Button(action: {
+                if let url = URL(string: UIApplication.openSettingsURLString){
+                    UIApplication.shared.open(url)
                 }
+            }) {
+                Text("Change Language")
+                    .foregroundColor(.white)
+                    .padding()
             }
-            .pickerStyle(.inline)
-            .padding()
+            .background(Color.black)
+            .cornerRadius(10)
         }
     }
 }

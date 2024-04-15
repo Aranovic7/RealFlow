@@ -31,8 +31,6 @@ class FirebaseManager: ObservableObject {
     @Published var repeatPasswordInput: String = ""
     
     @Published var profileImage: UIImage?
-    @Published var retrievedImage = [UIImage]()
-    
     @Published var profileImageURL: URL?
     
     // Funktion för att registrera en användare
@@ -122,7 +120,6 @@ class FirebaseManager: ObservableObject {
             }
         } else {
             print("Lösenorden matchar inte")
-            // Här kan du meddela användaren om att lösenorden inte matchar
         }
     }
 
@@ -151,31 +148,6 @@ class FirebaseManager: ObservableObject {
         }
     }
     
-    
-//    func fetchUserData() {
-//        
-//        guard let currentUser = auth.currentUser?.uid else { return }
-//        
-//        print("currentUser in fetchUserData: \(currentUser)")
-//        
-//        let docRef = db.collection(USER_DATA_COLLECTION).document(currentUser)
-//        
-//        docRef.getDocument { (document, error ) in
-//            if let document = document, document.exists {
-//                if let data = document.data(), let firstName = data["firstName"] as? String, let lastName = data["lastName"] as? String, let username = data["username"] as? String {
-//                    self.firstName = firstName
-//                    self.lastName = lastName
-//                    self.username = username
-//                    
-//                    
-//                }
-//            } else {
-//                print("Document does not exist")
-//            }
-//            
-//        }
-//        
-//    }
     
     func fetchUserData() {
         

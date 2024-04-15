@@ -18,12 +18,13 @@
 		B08EFD442BA621E600B5DE33 /* ProfileScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = B08EFD432BA621E600B5DE33 /* ProfileScreen.swift */; };
 		B08EFD462BA6221700B5DE33 /* SettingsScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = B08EFD452BA6221700B5DE33 /* SettingsScreen.swift */; };
 		B0B4038F2BB72B5A00F6C745 /* AboutUs.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0B4038E2BB72B5A00F6C745 /* AboutUs.swift */; };
-		B0B403912BB7328100F6C745 /* SupportChatScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0B403902BB7328100F6C745 /* SupportChatScreen.swift */; };
 		B0C12B642B8E247F00B766B2 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B0C12B632B8E247F00B766B2 /* GoogleService-Info.plist */; };
 		B0C12B682B8E3A7100B766B2 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = B0C12B672B8E3A7100B766B2 /* FirebaseAuth */; };
 		B0C12B6A2B8E3D7F00B766B2 /* FirebaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0C12B692B8E3D7F00B766B2 /* FirebaseManager.swift */; };
 		B0D366A82BB1F71B00146174 /* FAQScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0D366A72BB1F71B00146174 /* FAQScreen.swift */; };
 		B0DD83F42B9F993C0098A2A0 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = B0DD83F32B9F993C0098A2A0 /* FirebaseFirestore */; };
+		B0ECFE7E2BCA8DD9002246C6 /* SupportMailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0ECFE7D2BCA8DD9002246C6 /* SupportMailView.swift */; };
+		B0ECFE802BCABA79002246C6 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = B0ECFE7F2BCABA79002246C6 /* Localizable.xcstrings */; };
 		B0F44BB82B8F843900DF2A21 /* MessagesScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0F44BB72B8F843900DF2A21 /* MessagesScreen.swift */; };
 		B0F44BBC2B8F872B00DF2A21 /* TopNavBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0F44BBB2B8F872B00DF2A21 /* TopNavBar.swift */; };
 		B0F44BBE2B8F934500DF2A21 /* NewMessagesBtn.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0F44BBD2B8F934500DF2A21 /* NewMessagesBtn.swift */; };
@@ -65,10 +66,11 @@
 		B08EFD432BA621E600B5DE33 /* ProfileScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileScreen.swift; sourceTree = "<group>"; };
 		B08EFD452BA6221700B5DE33 /* SettingsScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsScreen.swift; sourceTree = "<group>"; };
 		B0B4038E2BB72B5A00F6C745 /* AboutUs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutUs.swift; sourceTree = "<group>"; };
-		B0B403902BB7328100F6C745 /* SupportChatScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupportChatScreen.swift; sourceTree = "<group>"; };
 		B0C12B632B8E247F00B766B2 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		B0C12B692B8E3D7F00B766B2 /* FirebaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseManager.swift; sourceTree = "<group>"; };
 		B0D366A72BB1F71B00146174 /* FAQScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FAQScreen.swift; sourceTree = "<group>"; };
+		B0ECFE7D2BCA8DD9002246C6 /* SupportMailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupportMailView.swift; sourceTree = "<group>"; };
+		B0ECFE7F2BCABA79002246C6 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 		B0F44BB72B8F843900DF2A21 /* MessagesScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesScreen.swift; sourceTree = "<group>"; };
 		B0F44BBB2B8F872B00DF2A21 /* TopNavBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopNavBar.swift; sourceTree = "<group>"; };
 		B0F44BBD2B8F934500DF2A21 /* NewMessagesBtn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewMessagesBtn.swift; sourceTree = "<group>"; };
@@ -144,7 +146,7 @@
 				B0106E422BB0742100C937E7 /* ContactUsScreen.swift */,
 				B0D366A72BB1F71B00146174 /* FAQScreen.swift */,
 				B0B4038E2BB72B5A00F6C745 /* AboutUs.swift */,
-				B0B403902BB7328100F6C745 /* SupportChatScreen.swift */,
+				B0ECFE7D2BCA8DD9002246C6 /* SupportMailView.swift */,
 			);
 			path = Authenticated;
 			sourceTree = "<group>";
@@ -219,6 +221,7 @@
 				B08DE4C22BBC813A001F6034 /* frontend */,
 				B0F9E3922B8291AE00C08FD0 /* RealFlowApp.swift */,
 				B0F9E3942B8291AE00C08FD0 /* ContentView.swift */,
+				B0ECFE7F2BCABA79002246C6 /* Localizable.xcstrings */,
 				B0F9E3962B8291AF00C08FD0 /* Assets.xcassets */,
 				B0F9E3982B8291AF00C08FD0 /* Preview Content */,
 			);
@@ -341,7 +344,10 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
-				Base,
+				de,
+				es,
+				sv,
+				fr,
 			);
 			mainGroup = B0F9E3862B8291AE00C08FD0;
 			packageReferences = (
@@ -365,6 +371,7 @@
 			files = (
 				B0F9E39A2B8291AF00C08FD0 /* Preview Assets.xcassets in Resources */,
 				B0F9E3972B8291AF00C08FD0 /* Assets.xcassets in Resources */,
+				B0ECFE802BCABA79002246C6 /* Localizable.xcstrings in Resources */,
 				B0C12B642B8E247F00B766B2 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -396,7 +403,6 @@
 				B0B4038F2BB72B5A00F6C745 /* AboutUs.swift in Sources */,
 				B0216E9F2B83D0750071DFB6 /* RegisterScreen.swift in Sources */,
 				B0F9E3952B8291AE00C08FD0 /* ContentView.swift in Sources */,
-				B0B403912BB7328100F6C745 /* SupportChatScreen.swift in Sources */,
 				B0106E432BB0742100C937E7 /* ContactUsScreen.swift in Sources */,
 				B0C12B6A2B8E3D7F00B766B2 /* FirebaseManager.swift in Sources */,
 				B0F9E3932B8291AE00C08FD0 /* RealFlowApp.swift in Sources */,
@@ -409,6 +415,7 @@
 				B0F44BB82B8F843900DF2A21 /* MessagesScreen.swift in Sources */,
 				B0FB951C2BAB0BD200721C3C /* AudioSettings.swift in Sources */,
 				B08EFD442BA621E600B5DE33 /* ProfileScreen.swift in Sources */,
+				B0ECFE7E2BCA8DD9002246C6 /* SupportMailView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

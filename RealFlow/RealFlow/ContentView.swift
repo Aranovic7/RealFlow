@@ -11,41 +11,45 @@ struct ContentView: View {
     
     @StateObject var firebaseManager = FirebaseManager()
     
+    
     var body: some View {
-        
         if firebaseManager.isLoggedIn {
-            TabView {
-       
-                    MessagesScreen()
+            TabView{
                 
-                        .tabItem {
-                            Image(systemName: "bubble")
-                            Text("Messages")
-                        }
+                MessagesScreen()
                 
-                    ProfileScreen()
+                    .tabItem {
+                        Image(systemName: "bubble")
+                        Text("Messages")
+                    }
+                
+                ProfileScreen()
+                
+                    .tabItem {
+                        Image(systemName: "person")
+                        Text("Profile")
+                    }
+                
+                SettingsScreen()
+                
+                    .tabItem {
+                        Image(systemName: "gear")
+                        Text("Settings")
+                    }
+            }
+            .environmentObject(firebaseManager)
             
-                        .tabItem {
-                            Image(systemName: "person")
-                            Text("Profile")
-                        }
-                
-                    SettingsScreen()
-                
-                        .tabItem {
-                            Image(systemName: "gear")
-                            Text("Settings")
-                        }
-            }.environmentObject(firebaseManager)
-                
             
         } else {
-            NavigationStack{
-                LoginScreen()
-            }.environmentObject(firebaseManager)
+            
+            LoginScreen()
+                .environmentObject(firebaseManager)
+              
         }
+        
     }
 }
+  
 
 #Preview {
     ContentView()

@@ -8,10 +8,54 @@
 import SwiftUI
 
 struct SupportMailView: View {
-    var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
-    }
+  @State private var subject: String = ""
+  @State private var message: String = ""
+ 
+    let supportTopics = [
+      "Tekniska problem",
+      "Feedback",
+      "Kontofrågor",
+      "Övriga frågor",
+    ]
+
+  var body: some View {
+      Form {
+        Section(header: Text("Kontaktinformation")) {
+         
+        }
+
+        Section(header: Text("Subject")) {
+            Picker("Choose a subject", selection: $subject) {
+                ForEach(supportTopics, id: \.self) { topic in
+                    Text(topic)
+                }
+            }
+          TextField("subject..", text: $subject)
+        }
+
+        Section(header: Text("Message")) {
+          TextEditor(text: $message)
+        }
+
+        Section {
+          Button(action: {
+            
+          }) {
+              HStack{
+                  Spacer()
+                  Text("Send")
+                  Spacer()
+              }
+           
+          }
+        }
+      }
+  }
+
 }
+
+
+
 
 #Preview {
     SupportMailView()

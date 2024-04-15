@@ -17,7 +17,7 @@ struct AboutUs: View {
             
             Spacer()
             
-            Text("Detta är en messenger app i realtid för att analysera hur teknisk och snabb kommunikation påverkar människans tydlighet i att kommunicera på. Därför också som namnet på appen är RealFlow Messaging")
+            Text("This is a messenger app in real time to analyse how techniqual and fast communication affects humans in terms of clarity in communicating. This is also why the name of the app is RealFlow Messaging")
                 .padding()
             
             Spacer()

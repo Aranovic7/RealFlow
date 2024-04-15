@@ -9,7 +9,7 @@ import SwiftUI
 
 struct SettingsScreen: View {
     
-    @State var navigateToAccount: Bool = false
+    @State var navigateToLanguageSettings: Bool = false
     @State var navigateToNotifications: Bool = false
     @State var navigateToApperance: Bool = false
     @State var navigateToPrivacy: Bool = false
@@ -31,7 +31,7 @@ struct SettingsScreen: View {
             VStack (spacing: 30) {
                 
                 HStack{
-                    Text("Allmänt:")
+                    Text("General:")
                         .bold()
                         .font(.title3)
                         .padding(.leading, 40)
@@ -46,7 +46,7 @@ struct SettingsScreen: View {
                         Image(systemName: "flag")
                             .padding(.leading, 40)
                         
-                        Text("Språkinställningar")
+                        Text("Language")
                         
                         Spacer()
                         
@@ -55,7 +55,9 @@ struct SettingsScreen: View {
                         
                     } 
                     .onTapGesture {
-                        navigateToAccount = true
+                        navigateToLanguageSettings = true
+                        print("navigateToLanguageSettings", navigateToLanguageSettings)
+                       
                     }
                     
                     HStack{
@@ -90,6 +92,7 @@ struct SettingsScreen: View {
                     }
                     .onTapGesture {
                         navigateToApperance = true
+                        
                     }
                 
                     Divider()
@@ -149,14 +152,51 @@ struct SettingsScreen: View {
                 } 
                 .foregroundStyle(Color.red)
                 .padding()
+                
+              
+                
+//                NavigationLink(destination: ProfileScreen(), isActive: $chevronBackNavigation) {
+//                                          EmptyView()
+//                                      }
                   
                     
                 }
             }
         }
+        .sheet(isPresented: $navigateToLanguageSettings) {
+            LanguageSettings()
+        }
+        .sheet(isPresented: $navigateToNotifications) {
+            NotificationsScreen()
+        }
+        .sheet(isPresented: $navigateToApperance) {
+            ApperanceScreen()
+        }
+        .sheet(isPresented: $navigateToHelp) {
+            ContactUsScreen()
+        }
+        .sheet(isPresented: $navigateToAbout) {
+            AboutUs()
+        }
     }
 }
 
-#Preview {
+#Preview("English") {
     SettingsScreen()
+}
+#Preview("Deutsch") {
+    SettingsScreen()
+        .environment(\.locale, Locale(identifier: "DE"))
+}
+#Preview("French") {
+    SettingsScreen()
+        .environment(\.locale, Locale(identifier: "FR"))
+}
+#Preview("Espanol") {
+    SettingsScreen()
+        .environment(\.locale, Locale(identifier: "ES"))
+}
+#Preview("Svenska") {
+    SettingsScreen()
+        .environment(\.locale, Locale(identifier: "SV"))
 }

@@ -15,7 +15,7 @@ struct ContactUsScreen: View {
     var body: some View {
         VStack{
             
-            Text("Har du några frågor eller behöver du hjälp? Vi finns för att hjälpa dig")
+            Text("Do you have any questions, or need help? We are here to help you.")
                 .font(.title3)
                 .bold()
                 .padding(30)
@@ -44,16 +44,17 @@ struct ContactUsScreen: View {
                     
                     VStack(alignment: .leading){
                         
-                        Text("Läs vanliga frågor")
+                        Text("Read FAQ")
                             .bold()
                             .padding(.bottom, 2)
                         
-                        Text("Få snabba svar på våra vanligaste frågor")
+                        Text("Read our answers to most commonly asked questions")
                             .font(.system(size: 14))
                         
-                    } .padding(.leading, 80)
+                    } .padding(.leading, 65)
                     
                 } .onTapGesture {
+                    print("help")
                     navigateToFAQ = true
                 }
                 
@@ -80,24 +81,30 @@ struct ContactUsScreen: View {
                 
                 VStack(alignment: .leading){
                     
-                    Text("Kontakta oss")
+                    Text("Contact us")
                         .bold()
                         .padding(.bottom, 2)
                     
-                    Text("Kontakta oss via chatten")
+                    Text("Contact us thorugh email")
                         .font(.system(size: 14))
                     
                 } .padding(.trailing)
                     
                 } .onTapGesture {
                    navigateToSupportChat = true
+                    print("navigateToSupportChat: \(navigateToSupportChat)")
                 }
                 
             }
             
             Spacer()
+            
+            NavigationLink(destination: SupportMailView(), isActive: $navigateToSupportChat) {
+                           EmptyView()
+                       }
                
         }
+      
     }
 }
 
