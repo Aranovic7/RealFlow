@@ -41,9 +41,11 @@ struct ContentView: View {
             
             
         } else {
+            NavigationStack{
+                LoginScreen()
+                    
+            } .environmentObject(firebaseManager)
             
-            LoginScreen()
-                .environmentObject(firebaseManager)
               
         }
         

@@ -15,6 +15,7 @@ struct SettingsScreen: View {
     @State var navigateToPrivacy: Bool = false
     @State var navigateToHelp: Bool = false
     @State var navigateToAbout: Bool = false
+    @State var showChangePasswordView: Bool = false
     @EnvironmentObject var firebaseManager: FirebaseManager
     
     var body: some View {
@@ -99,6 +100,28 @@ struct SettingsScreen: View {
                         .frame(width: 315)
                 
                 HStack{
+                    Text("Security:")
+                        .bold()
+                        .font(.title3)
+                        .padding(.leading, 40)
+                    Spacer()
+                }
+                
+                HStack{
+                    Image(systemName: "lock")
+                        .padding(.leading, 40)
+                    
+                    Text("Change password")
+                    
+                    Spacer()
+                    
+                    Image(systemName: "arrow.right")
+                        .padding(.trailing, 40)
+                } .onTapGesture {
+                    showChangePasswordView = true
+                }
+                
+                HStack{
                     Text("Help & Support:")
                         .bold()
                         .font(.title3)
@@ -152,13 +175,6 @@ struct SettingsScreen: View {
                 } 
                 .foregroundStyle(Color.red)
                 .padding()
-                
-              
-                
-//                NavigationLink(destination: ProfileScreen(), isActive: $chevronBackNavigation) {
-//                                          EmptyView()
-//                                      }
-                  
                     
                 }
             }
@@ -178,6 +194,9 @@ struct SettingsScreen: View {
         .sheet(isPresented: $navigateToAbout) {
             AboutUs()
         }
+        .sheet(isPresented: $showChangePasswordView, content: {
+            ChangePasswordScreen()
+        })
     }
 }
 

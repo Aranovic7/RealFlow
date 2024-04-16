@@ -172,6 +172,45 @@ class FirebaseManager: ObservableObject {
         }
         
     }
+    
+    func changePassword(currentPassword: String, newPassword: String){
+        
+        guard let currentUser = auth.currentUser else {return}
+        
+        let credential = EmailAuthProvider.credential(withEmail: currentUser.email!, password: currentPassword)
+        
+        currentUser.updatePassword(to: newPassword) { error in
+            if let error = error {
+                print("Error updating password: \(error)")
+            } else {
+                print("Password updated successfully")
+            }
+            
+        }
+    }
+    
+    func changeProfileImage(_ image: UIImage) {
+        
+        guard let currentUser = auth.currentUser else {return}
+        
+        uploadImage(image) { result in
+            switch result {
+            case .success(let url):
+                let userDataRef = self.db.collection(self.USER_DATA_COLLECTION).document(currentUser.uid)
+                userDataRef.updateData(["profileImageURL": url.absoluteString]) { error in
+                    if let error = error {
+                        print("error updating data: \(error)")
+                    } else {
+                        print("Profile picture updated successfully")
+                        self.profileImageURL = url
+                    }
+                }
+            case.failure(let error):
+                print("Fel vid uppladdning av profilbild: \(error)")
+            }
+            
+        }
+    }
 
     
 }

@@ -197,6 +197,9 @@
         }
       }
     },
+    "Alert" : {
+
+    },
     "Already have an account? Sign in" : {
       "localizations" : {
         "de" : {
@@ -310,6 +313,12 @@
       }
     },
     "Change Language" : {
+
+    },
+    "Change password" : {
+
+    },
+    "Change Password" : {
 
     },
     "Choose a subject" : {
@@ -451,6 +460,9 @@
           }
         }
       }
+    },
+    "Current Password" : {
+
     },
     "Dark Theme" : {
       "localizations" : {
@@ -961,6 +973,9 @@
         }
       }
     },
+    "New Password" : {
+
+    },
     "Notifications" : {
       "localizations" : {
         "de" : {
@@ -1016,6 +1031,9 @@
           }
         }
       }
+    },
+    "OK" : {
+
     },
     "online" : {
       "localizations" : {
@@ -1213,6 +1231,9 @@
         }
       }
     },
+    "Repeat New Password" : {
+
+    },
     "Repeat password" : {
       "localizations" : {
         "de" : {
@@ -1240,6 +1261,12 @@
           }
         }
       }
+    },
+    "Reset Password" : {
+
+    },
+    "Security:" : {
+
     },
     "Select a language" : {
       "extractionState" : "stale",
