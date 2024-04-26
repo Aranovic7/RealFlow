@@ -99,10 +99,14 @@ struct ContactUsScreen: View {
             
             Spacer()
             
-            NavigationLink(destination: SupportMailView(), isActive: $navigateToSupportChat) {
-                           EmptyView()
-                       }
+            
                
+        }
+        .sheet(isPresented: $navigateToFAQ) {
+            FAQScreen()
+        }
+        .sheet(isPresented: $navigateToSupportChat) {
+            SupportMailView()
         }
       
     }

@@ -1,6 +1,9 @@
 {
   "sourceLanguage" : "en",
   "strings" : {
+    " I believe that everyone should have the possibility to express their feelings or opinions regardless of ethnicity, race and religion. RealFlow is for everyone!" : {
+
+    },
     "%@" : {
       "localizations" : {
         "de" : {
@@ -114,6 +117,7 @@
       }
     },
     "About us" : {
+      "extractionState" : "stale",
       "localizations" : {
         "de" : {
           "stringUnit" : {
@@ -312,7 +316,7 @@
         }
       }
     },
-    "Change Language" : {
+    "Cancel" : {
 
     },
     "Change password" : {
@@ -492,6 +496,9 @@
         }
       }
     },
+    "Description" : {
+
+    },
     "Do you have any questions, or need help? We are here to help you." : {
       "localizations" : {
         "de" : {
@@ -548,6 +555,9 @@
         }
       }
     },
+    "Failed to load image: %@" : {
+
+    },
     "Firstname" : {
       "localizations" : {
         "de" : {
@@ -576,6 +586,9 @@
         }
       }
     },
+    "For everyone" : {
+
+    },
     "General:" : {
       "localizations" : {
         "de" : {
@@ -603,6 +616,9 @@
           }
         }
       }
+    },
+    "Good luck!" : {
+
     },
     "hello" : {
       "extractionState" : "stale",
@@ -802,9 +818,6 @@
         }
       }
     },
-    "Language Settings" : {
-
-    },
     "Lastname" : {
       "localizations" : {
         "de" : {
@@ -973,6 +986,9 @@
         }
       }
     },
+    "New Message" : {
+
+    },
     "New Password" : {
 
     },
@@ -1031,6 +1047,9 @@
           }
         }
       }
+    },
+    "Now good luck building up old relations or finding new ones. Don't forget to send your frineds some gifs to make them laugh!" : {
+
     },
     "OK" : {
 
@@ -1202,6 +1221,12 @@
           }
         }
       }
+    },
+    "RealFlow is a messenger app in real time that was created by only one person to analyse how techniqual and effective communication affects us in different ways. For example in terms of clarity in communicating, etc. This is also why the name of the app is RealFlow Messaging" : {
+
+    },
+    "RealFlow Messaging" : {
+
     },
     "Register" : {
       "localizations" : {
@@ -1522,6 +1547,7 @@
       }
     },
     "This is a messenger app in real time to analyse how techniqual and fast communication affects humans in terms of clarity in communicating. This is also why the name of the app is RealFlow Messaging" : {
+      "extractionState" : "stale",
       "localizations" : {
         "de" : {
           "stringUnit" : {
@@ -1606,6 +1632,7 @@
       }
     },
     "USERNAME" : {
+      "extractionState" : "stale",
       "localizations" : {
         "de" : {
           "stringUnit" : {

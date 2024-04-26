@@ -18,11 +18,16 @@ class AppDelegate: NSObject, UIApplicationDelegate {
 
 @main
 struct RealFlowApp: App {
+    @AppStorage("isDarkMode") var isDark: Bool = false
     @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+         //   Environment(\.colorScheme, isDark ? .dark : .light) {
+                ContentView()
+                .preferredColorScheme(isDark ? .dark : .light)
+         //   }
+            
         }
         
     }

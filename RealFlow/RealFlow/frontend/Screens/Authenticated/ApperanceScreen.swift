@@ -9,103 +9,50 @@ import SwiftUI
 
 struct ApperanceScreen: View {
     
-    @State var lightTheme: Bool = true
+    @AppStorage("isDarkMode") var isDark: Bool = false
     
     var body: some View {
-        
-        ZStack{
+        VStack{
             
-            if lightTheme {
-                Color.white
-                    .ignoresSafeArea()
-            } else {
-                Color.black
-                    .ignoresSafeArea()
+            Text(isDark ? "Dark Theme" : "Light Theme")
+                .preferredColorScheme(isDark ? .dark : .light)
+                .font(.title)
+                .bold()
+            
+            Spacer()
+            
+            ZStack{
+                
+                Image(systemName: isDark ? "lightbulb.fill" : "lightbulb")
+                    .resizable()
+                    .scaledToFit()
+                    .frame(width: 100, height: 100)
+                
             }
             
-            VStack{
+            Spacer()
+            
+            Toggle(isOn: $isDark) {
                 
-                if lightTheme {
-                    
-                    Text("Light Theme")
-                        .foregroundStyle(Color.black)
-                        .font(.title)
-                        .bold()
-                    
-                } else {
-                    
-                    Text("Dark Theme")
-                        .foregroundStyle(Color.white)
-                        .font(.title)
-                        .bold()
-                }
+                Text(isDark ? "Activate Light Theme": "Activate Dark Theme")
+                    .bold()
                 
-                Spacer()
-                
-                ZStack{
-                    
-                    if lightTheme {
-                        
-                        Image(systemName: "sun.max.fill")
-                            .resizable()
-                            .scaledToFit()
-                            .frame(width: 100, height: 100)
-                            .foregroundStyle(Color.yellow)
-                        
-                    } else {
-                        
-                        Image(systemName: "moon.fill")
-                            .resizable()
-                            .scaledToFit()
-                            .frame(width: 100, height: 100)
-                            .foregroundStyle(Color.white)
-                        
-                    }
-                    
-                }
-                
-                Spacer()
-                
-                Toggle(isOn: $lightTheme) {
-                    
-                    if lightTheme {
-                        
-                        Text("Activate Dark Theme")
-                            .bold()
-                        
-                        Image(systemName: "moon.fill")
-                            .tint(Color.black)
-                           
-                    } else {
-                        
-                        Rectangle()
-                            .frame(width: 220, height: 35)
-                            .clipShape(.rect(cornerRadius: 8))
-                            .overlay{
-                                HStack{
-                                    Text("Activate Light Theme")
-                                        .bold()
-                                        .tint(Color.black)
-                                    
-                                    Image(systemName: "sun.max.fill")
-                                        .tint(Color.black)
-                                    
-                                }
-                            }
-                    }
-                    
-                }
-                .tint(lightTheme ? Color.black : Color.white)
-                .toggleStyle(.button)
-                .padding()
-                
-               
+                Image(systemName: isDark ? "lightbulb.fill" : "lightbulb")
             }
             
         }
+        // .tint(lightTheme ? Color.black : Color.white)
+        .toggleStyle(.button)
+        .padding()
+        .environment(\.colorScheme, isDark ? .dark : .light)
+        
         
     }
+    
+    
+    
 }
+
 
 #Preview {
     ApperanceScreen()

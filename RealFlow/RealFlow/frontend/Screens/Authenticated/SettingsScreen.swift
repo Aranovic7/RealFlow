@@ -45,7 +45,7 @@ struct SettingsScreen: View {
                     HStack{
                         
                         Image(systemName: "flag")
-                            .padding(.leading, 40)
+                            .padding(.leading, 43)
                         
                         Text("Language")
                         
@@ -56,26 +56,25 @@ struct SettingsScreen: View {
                         
                     } 
                     .onTapGesture {
-                        navigateToLanguageSettings = true
+                        if let url = URL(string: UIApplication.openSettingsURLString){
+                            UIApplication.shared.open(url)
+                        }
                         print("navigateToLanguageSettings", navigateToLanguageSettings)
                        
                     }
                     
                     HStack{
                         
-                        Image(systemName: "bell.and.waves.left.and.right")
-                            .padding(.leading, 40)
+                        Toggle(isOn: .constant(true), label: {
+                            HStack{
+                                Image(systemName: "bell.and.waves.left.and.right")
+                                    .padding(.leading, 40)
+                                Text("Notifications")
+                            }
+                          
+                        }).padding(.trailing, 25)
                         
-                        Text("Notifications")
                         
-                        Spacer()
-                        
-                        Image(systemName: "arrow.right")
-                            .padding(.trailing, 40)
-                        
-                    }
-                    .onTapGesture {
-                        navigateToNotifications = true
                     }
                     
                     HStack{
@@ -178,12 +177,6 @@ struct SettingsScreen: View {
                     
                 }
             }
-        }
-        .sheet(isPresented: $navigateToLanguageSettings) {
-            LanguageSettings()
-        }
-        .sheet(isPresented: $navigateToNotifications) {
-            NotificationsScreen()
         }
         .sheet(isPresented: $navigateToApperance) {
             ApperanceScreen()

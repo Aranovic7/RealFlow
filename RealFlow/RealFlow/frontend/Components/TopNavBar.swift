@@ -8,16 +8,35 @@
 import SwiftUI
 
 struct TopNavBar: View {
+    
+    @EnvironmentObject var firebaseManager: FirebaseManager
     @State var shouldShowLogOutOption: Bool = false
+    
     var body: some View {
         VStack{
+            
             HStack(spacing: 16){
                 
-                Image(systemName: "person.fill")
-                    .font(.system(size: 34, weight: .heavy))
+                //                Image(systemName: "person.fill")
+                //                    .font(.system(size: 34, weight: .heavy))
+                
+                AsyncImage(url: firebaseManager.profileImageURL, content: { returnedImage in
+                    returnedImage
+                        .resizable()
+                        .scaledToFill()
+                        .frame(width: 80, height: 80)
+                        .clipShape(Circle())
+                    
+                }, placeholder: {
+                    Image(.maleAvatar)
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 80, height: 80)
+                        .clipShape(Circle())
+                })
                 
                 VStack(alignment: .leading, spacing: 4){
-                    Text("USERNAME")
+                    Text("\(firebaseManager.username ?? "USERNAME")")
                         .font(.system(size: 24, weight: .bold))
                     HStack{
                         Circle()
@@ -29,30 +48,15 @@ struct TopNavBar: View {
                     }
                 }
                 Spacer()
-//                Button {
-//                    shouldShowLogOutOption.toggle()
-//                } label: {
-//                    Image(systemName: "gear")
-//                        .font(.system(size: 24, weight: .bold))
-//                        .foregroundStyle(Color.black)
-//                }
                 
             }
             .padding()
-//            .actionSheet(isPresented: $shouldShowLogOutOption) {
-//                ActionSheet(
-//                    title: Text("Settings"),
-//                    message: Text("What do you want to do?"),
-//                    buttons: [
-//                        .destructive(Text("Sign Out")) {
-//                            // Hantera utloggning
-//                            print("handle sign out")
-//                        },
-//                        .cancel()
-//                    ]
-//                )
-//            }
+            
         }
+        .onAppear{
+            firebaseManager.fetchUserData()
+        }
+        
     }
 }
 
