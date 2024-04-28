@@ -312,11 +312,6 @@ class FirebaseManager: ObservableObject {
                 // Om ingen fel uppstod, fortsätt med att hantera de hämtade dokumenten
                 var messages: [Message] = []
                 
-            
-       
-            
-            
-            
             // Iterera genom dokumenten som hämtats från Firestore
             for document in querySnapshot!.documents {
                 // Extrahera data från varje dokument och skapa Message-objekt

@@ -10,12 +10,14 @@ import Foundation
 class ChatLogViewModel: ObservableObject {
     
     var firebaseManager: FirebaseManager // Använd den delade instansen av FirebaseManager
-    @Published var chatText = ""
+    @Published var chatText: String = ""
     @Published var messages: [Message] = []
+    @Published var count: Int = 0
     
     
     init(firebaseManager: FirebaseManager = FirebaseManager()) {
            self.firebaseManager = firebaseManager
+           self.count += 1
            fetchMessages() // Anropa fetchMessages() när ChatLogViewModel skapas
        }
     
@@ -29,6 +31,7 @@ class ChatLogViewModel: ObservableObject {
                 if success {
                     print("Meddelandet sparades framgångsrikt")
                     self.chatText = ""
+                    self.count += 1
                 } else {
                     print("Misslyckades med att spara meddelandet")
                 }
@@ -41,9 +44,7 @@ class ChatLogViewModel: ObservableObject {
             firebaseManager.fetchMessages { messages in
                 DispatchQueue.main.async {
                     self.messages = messages
-                   // print("fetched messages in chatlogviewmodel: \(messages)")
                 }
-               
             }
         }
     
