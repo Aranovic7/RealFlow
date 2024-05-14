@@ -9,52 +9,115 @@ import SwiftUI
 
 struct MessagesScreen: View {
     
-   // @EnvironmentObject var firebaseManager: FirebaseManager
+    @EnvironmentObject var firebaseManager: FirebaseManager
+    @EnvironmentObject var chatLogViewModel: ChatLogViewModel
+    
+    @State private var latestMessage: Message? // State-variabel för att hålla det senaste meddelandet
+    
+    // Dictionary för att lagra det senaste meddelandet för varje användare
+        @State private var latestMessages: [String: Message] = [:]
+    
+    var dateFormatter: DateFormatter {
+        let formatter = DateFormatter()
+        formatter.timeStyle = .short
+        return formatter
+    }
     
     var body: some View {
         VStack{
             TopNavBar()
             ScrollView{
-                ForEach(0..<10, id: \.self) { num in
-                    VStack{
-                        HStack(spacing: 16){
-                            
-                            Image(systemName: "person.fill")
-                                .font(.system(size: 32))
-                                .padding(8)
-                                .overlay(RoundedRectangle(cornerRadius: 44).stroke(lineWidth: 1))
-                            
-                            
-                            VStack(alignment: .leading){
-                                Text("Username")
-                                    .font(.system(size: 16) .weight(.bold))
-                                Text("Message")
-                                    .font(.system(size: 14))
-                                    .foregroundStyle(Color.gray)
-                            }
-                            Spacer()
-                            Text("22d")
-                                .font(.system(size: 14, weight: .semibold))
-                        }.onTapGesture {
-                            print("helo")
+                ForEach(firebaseManager.usersData.filter { user in
+                    let currentUserUID = firebaseManager.auth.currentUser?.uid ?? ""
+                    return firebaseManager.recentMessages.contains { message in
+                        (message.senderID == currentUserUID && message.recipientUsername == user.username) ||
+                        (message.senderID == user.username && message.recipientUsername == currentUserUID)}}) { user in
+                            NavigationLink(destination: ChatLogView(user: user)) {
+                                VStack{
+                                    HStack(spacing: 16){
+                                        
+                                        if let profileImageURL = user.profileImageURL {
+                                            AsyncImage(url: profileImageURL) { phase in
+                                                switch phase {
+                                                case .success(let image):
+                                                    image
+                                                        .resizable()
+                                                        .scaledToFill()
+                                                        .font(.system(size: 32))
+                                                        .clipShape(Circle())
+                                                    //                                            .overlay(RoundedRectangle(cornerRadius: 44).stroke(Color.black, style: .init(lineWidth: 1)))
+                                                case .failure(let error):
+                                                    Text("Failed to load image: \(error.localizedDescription)")
+                                                case .empty:
+                                                    ProgressView()
+                                                @unknown default:
+                                                    EmptyView()
+                                                }
+                                            }
+                                        }
+                                        
+                                        
+                                        VStack(alignment: .leading){
+                                            Text(user.username)
+                                                .font(.system(size: 16) .weight(.bold))
+                                            
+                                            if let latestMessage = latestMessages[user.username] {
+                                                
+                                                Text(latestMessage.text)
+                                                    .font(.system(size: 14))
+                                                    .foregroundStyle(Color.gray)
+                                                
+                                                
+                                            }
+                                            
+                                            
+                                        }
+                                        Spacer()
+                                        
+                                        if let latestMessage = latestMessages[user.username] {
+                                            Text(dateFormatter.string(from: latestMessage.timestamp))
+                                                .font(.system(size: 14, weight: .semibold))
+                                        }
+                                        
+                                    }.onTapGesture {
+                                        print("recentMessages: \(firebaseManager.recentMessages)")
+                                    }
+                                    
+                                }
+                                Divider()
+                                    .padding(.vertical, 8)
+                            } .padding(.horizontal)
                         }
-                        
-                    }
-                    Divider()
-                        .padding(.vertical, 8)
-                } .padding(.horizontal)
-                
             }
             
             
         }.overlay(
             NewMessagesBtn(), alignment: .bottom
+            
+        )
+        .onAppear{
+            firebaseManager.fetchAllUsers{ users in
+                firebaseManager.usersData = users
+            }
+            firebaseManager.fetchMessages { messages in
+                // Uppdatera latestMessages-dictionaryn med det senaste meddelandet för varje användare
+                var updatedLatestMessages: [String: Message] = [:]
+                for message in messages {
+                    updatedLatestMessages[message.recipientUsername] = message
+                }
                 
-            )
-
+                self.latestMessages = updatedLatestMessages
+                
+                firebaseManager.recentMessages = messages
+            }
+            print("recentMessages: \(firebaseManager.recentMessages)")
+        }
+        
     }
 }
+        
 
 #Preview {
     MessagesScreen()
 }
+

@@ -18,7 +18,7 @@ struct CreateNewMessageView: View {
             ScrollView{
                 ForEach(firebaseManager.usersData) { user in
                     NavigationLink{
-                        ChatLogView(user: user, chatLogViewModel: ChatLogViewModel(), firebaseManager: firebaseManager)
+                        ChatLogView(user: user)
                       //  Button {
                         //    print("Selected user: \(user.username)")
                          //   navigateToChatLogView = true

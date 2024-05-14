@@ -24,6 +24,11 @@ struct Message: Identifiable {
     var timestamp: Date // Används för att ordna meddelandena efter tidpunkt
 }
 
+//struct UserWithLatestMessage {
+//    var user: UserData
+//    var latestMessage: Message?
+//}
+
 class FirebaseManager: ObservableObject {
     
     var db = Firestore.firestore() // Creating first instance of database
@@ -33,6 +38,8 @@ class FirebaseManager: ObservableObject {
     let storage = Storage.storage() // Initialize firebase Storage
     let MESSAGES_COLLECTION = "messages"
     
+//    let RECENT_MESSAGES_COLLECTION = "recent_messages"
+   
     @Published var isLoggedIn: Bool = false
     @Published var usernameInput: String = ""
     @Published var passwordInput: String = ""
@@ -53,6 +60,17 @@ class FirebaseManager: ObservableObject {
     @Published var currentUserUID: String?
     
     var messagesListener: ListenerRegistration?
+    
+    var recentMessages: [Message] = []
+    
+    func addRecentMessage(_ message: Message) {
+        recentMessages.append(message)
+    }
+    
+    func latestMessageForUser(_ username: String) -> Message? {
+        return recentMessages.last { $0.recipientUsername == username }
+    }
+
     
     
     // Funktion för att registrera en användare
@@ -337,9 +355,13 @@ class FirebaseManager: ObservableObject {
             completion(messages)
         }
     }
-
-
     
+   
+    
+   
+    
+   
+   
 
     
 }

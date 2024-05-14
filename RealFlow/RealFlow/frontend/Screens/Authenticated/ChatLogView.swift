@@ -10,8 +10,9 @@ import SwiftUI
 struct ChatLogView: View {
     
     let user: UserData
-    @ObservedObject var chatLogViewModel: ChatLogViewModel
-    var firebaseManager: FirebaseManager
+    @EnvironmentObject var chatLogViewModel: ChatLogViewModel
+    //var firebaseManager: FirebaseManager
+    @EnvironmentObject var firebaseManager: FirebaseManager
     // Add a new property to store the current user's ID
      var currentUserId: String {
        return firebaseManager.auth.currentUser?.uid ?? ""
@@ -93,5 +94,5 @@ struct ChatLogView: View {
 }
 
 #Preview {
-    ChatLogView(user: .init(username: "Dennix"), chatLogViewModel: ChatLogViewModel(), firebaseManager: FirebaseManager())
+    ChatLogView(user: .init(username: "Dennix"))
 }

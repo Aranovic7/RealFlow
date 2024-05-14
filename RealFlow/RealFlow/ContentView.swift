@@ -10,6 +10,7 @@ import SwiftUI
 struct ContentView: View {
     
     @StateObject var firebaseManager = FirebaseManager()
+    @StateObject var chatLogViewModel = ChatLogViewModel()
     
     
     var body: some View {
@@ -38,13 +39,16 @@ struct ContentView: View {
                     }
             }
             .environmentObject(firebaseManager)
+            .environmentObject(chatLogViewModel)
             
             
         } else {
             NavigationStack{
                 LoginScreen()
                     
-            } .environmentObject(firebaseManager)
+            } 
+            .environmentObject(firebaseManager)
+            .environmentObject(chatLogViewModel)
             
               
         }
@@ -56,4 +60,5 @@ struct ContentView: View {
 #Preview {
     ContentView()
         .environmentObject(FirebaseManager())
+        .environmentObject(ChatLogViewModel())
 }
