@@ -11,11 +11,16 @@ struct ContentView: View {
     
     @StateObject var firebaseManager = FirebaseManager()
     @StateObject var chatLogViewModel = ChatLogViewModel()
-    
+   
     
     var body: some View {
         if firebaseManager.isLoggedIn {
+           
             TabView{
+                
+//                NavigationView{
+//                    MessagesScreen(selectedUser: $selectedUser)
+//                }
                 
                 MessagesScreen()
                 

@@ -16,7 +16,7 @@ struct UserData: Identifiable {
     var profileImageURL: URL?
 }
 
-struct Message: Identifiable {
+struct Message: Identifiable, Equatable {
     var id = UUID()
     var text: String
     var senderID: String

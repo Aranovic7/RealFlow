@@ -10,14 +10,13 @@ import SwiftUI
 struct ChatLogView: View {
     
     let user: UserData
-    @EnvironmentObject var chatLogViewModel: ChatLogViewModel
-    //var firebaseManager: FirebaseManager
+    @StateObject var chatLogViewModel = ChatLogViewModel()
+    
      var firebaseManager: FirebaseManager
     // Add a new property to store the current user's ID
      var currentUserId: String {
        return firebaseManager.auth.currentUser?.uid ?? ""
      }
-    
     
     var body: some View {
         VStack{
@@ -55,40 +54,32 @@ struct ChatLogView: View {
                                 }
                             } .padding(.horizontal)
                                 .padding(.top, 8)
-                        
+                            
                         }
                         
                         HStack{ Spacer() }
-                            .id("Empty")
+                            .id("lastMessage")
                     }
                     .onAppear{
-                        scrollViewProxy.scrollTo("Empty", anchor: .bottom)
+                
+                        scrollViewProxy.scrollTo("lastMessage", anchor: .bottom)
                     }
-                    .onChange(of: chatLogViewModel.count) { _ in
+                    .onChange(of: chatLogViewModel.messages) { _ in
                         withAnimation(.easeOut(duration: 0.5)){
-                            scrollViewProxy.scrollTo("Empty", anchor: .bottom)
+                            scrollViewProxy.scrollTo("lastMessage", anchor: .bottom)
                         }
                         
                     }
+                }
                        
                 }
             }
             .background(Color.gray.opacity(0.2))
             .navigationTitle(user.username)
             .navigationBarTitleDisplayMode(.inline)
-            .onReceive(chatLogViewModel.$messages) { messages in
-                // Uppdatera vyn när meddelandena ändras
-                print("fetched messaged onReceive: \(messages)")
-                //                    chatLogViewModel.fetchMessages()
-                
-            }
-            .onAppear{
-                print("Current user id: \(currentUserId)")
             
-            }
-            
-            
-        }
+        
+        .toolbar(.hidden, for: .tabBar)
         ChatBarComponent(chatLogViewModel: chatLogViewModel, user: user)
     }
 }

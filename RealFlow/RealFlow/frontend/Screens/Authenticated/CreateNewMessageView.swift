@@ -11,7 +11,7 @@ struct CreateNewMessageView: View {
     
     @Environment(\.presentationMode) var presentationMode
     @EnvironmentObject var firebaseManager: FirebaseManager
-    @State var navigateToChatLogView: Bool = false
+    //@State var navigateToChatLogView: Bool = false
     
     var body: some View {
         NavigationStack{
