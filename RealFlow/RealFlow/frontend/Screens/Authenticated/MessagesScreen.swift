@@ -17,11 +17,12 @@ struct MessagesScreen: View {
     // Dictionary för att lagra det senaste meddelandet för varje användare
         @State private var latestMessages: [String: Message] = [:]
     
-    var dateFormatter: DateFormatter {
-        let formatter = DateFormatter()
-        formatter.timeStyle = .short
-        return formatter
-    }
+//    var dateFormatter: DateFormatter {
+//        let formatter = DateFormatter()
+//        formatter.timeStyle = .short
+//        return formatter
+//    }
+    
     
     var body: some View {
         VStack{
@@ -32,7 +33,7 @@ struct MessagesScreen: View {
                     return firebaseManager.recentMessages.contains { message in
                         (message.senderID == currentUserUID && message.recipientUsername == user.username) ||
                         (message.senderID == user.username && message.recipientUsername == currentUserUID)}}) { user in
-                            NavigationLink(destination: ChatLogView(user: user)) {
+                            NavigationLink(destination: ChatLogView(user: user, firebaseManager: firebaseManager)) {
                                 VStack{
                                     HStack(spacing: 16){
                                         
@@ -75,7 +76,8 @@ struct MessagesScreen: View {
                                         Spacer()
                                         
                                         if let latestMessage = latestMessages[user.username] {
-                                            Text(dateFormatter.string(from: latestMessage.timestamp))
+                                            
+                                            Text(latestMessage.timeAgo)
                                                 .font(.system(size: 14, weight: .semibold))
                                         }
                                         

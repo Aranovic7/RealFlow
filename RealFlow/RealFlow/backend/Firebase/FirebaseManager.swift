@@ -22,7 +22,17 @@ struct Message: Identifiable {
     var senderID: String
     var recipientUsername: String
     var timestamp: Date // Används för att ordna meddelandena efter tidpunkt
+    
+    var timeAgo: String {
+        let formatter = RelativeDateTimeFormatter()
+        formatter.unitsStyle = .abbreviated
+        return formatter.localizedString(for: timestamp, relativeTo: Date())
+    }
+    
 }
+
+
+
 
 //struct UserWithLatestMessage {
 //    var user: UserData
