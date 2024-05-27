@@ -26,6 +26,11 @@ struct ProfileScreen: View {
                             .scaledToFill()
                             .frame(width: 150, height: 150)
                             .clipShape(Circle())
+                            .overlay(alignment: .bottomTrailing){
+                                Image(systemName: "checkmark.seal.fill")
+                                    .font(.title)
+                                    .foregroundStyle(Color.blue)
+                            }
                         
                     }, placeholder: {
                         Image(.maleAvatar)
@@ -39,9 +44,7 @@ struct ProfileScreen: View {
                
                 
                     
-                Image(systemName: "checkmark.seal.fill")
-                    .font(.system(size: 33))
-                    .foregroundStyle(Color.blue)
+              
                 
                 HStack{
                     
@@ -61,8 +64,6 @@ struct ProfileScreen: View {
                     .padding()
                     .font(.headline)
                 
-                Text("This is a text about me. lorem ipsum is a dummy text dummy dummy text")
-                    .padding()
                 
                 
                 
@@ -74,6 +75,7 @@ struct ProfileScreen: View {
                             if let image = UIImage(data: data) {
                                 firebaseManager.changeProfileImage(image)
                                 print("profileImageURL: \(firebaseManager.profileImageURL)")
+                              
                             }
                         }
                     }

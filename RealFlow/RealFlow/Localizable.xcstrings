@@ -993,6 +993,9 @@
     "New Password" : {
 
     },
+    "No conversations found." : {
+
+    },
     "Notifications" : {
       "localizations" : {
         "de" : {
@@ -1577,6 +1580,7 @@
       }
     },
     "This is a text about me. lorem ipsum is a dummy text dummy dummy text" : {
+      "extractionState" : "stale",
       "localizations" : {
         "de" : {
           "stringUnit" : {

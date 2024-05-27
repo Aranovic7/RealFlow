@@ -36,7 +36,7 @@ struct TopNavBar: View {
                 })
                 
                 VStack(alignment: .leading, spacing: 4){
-                    Text("\(firebaseManager.username ?? "USERNAME")")
+                    Text("\(firebaseManager.firstName ?? "USERNAME")")
                         .font(.system(size: 24, weight: .bold))
                     HStack{
                         Circle()

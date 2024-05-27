@@ -14,6 +14,8 @@ struct RegisterScreen: View {
     
     @State var photosPickerItem: PhotosPickerItem?
     
+    @State private var navigateToLoginScreen = false
+    
     var body: some View {
         VStack{
         
@@ -109,6 +111,10 @@ struct RegisterScreen: View {
                 Button(action: {
                     
                     firebaseManager.registerUser(registerUsernameInput: firebaseManager.registerUsernameInput, registerPasswordInput: firebaseManager.registerPasswordInput, repeatPasswordInput: firebaseManager.repeatPasswordInput, firstName: firebaseManager.firstName, lastName: firebaseManager.lastName, profileImage: firebaseManager.profileImage)
+                    
+                    navigateToLoginScreen = true
+                    
+                    firebaseManager.resetRegisterFields()
                 }, label: {
                     Text("Create account")
                         .bold()
@@ -125,6 +131,11 @@ struct RegisterScreen: View {
                 
             
         }
+        .background(
+            NavigationLink(destination: LoginScreen(), isActive: $navigateToLoginScreen) {
+                            EmptyView()
+                        }
+        )
     }
 }
 

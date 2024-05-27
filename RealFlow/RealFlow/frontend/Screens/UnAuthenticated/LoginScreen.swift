@@ -92,7 +92,7 @@ struct LoginScreen: View {
             }
            
         
-        }
+        }.navigationBarBackButtonHidden()
     }
 }
 

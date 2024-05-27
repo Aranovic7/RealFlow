@@ -13,8 +13,9 @@
 		B02171EC2BBB618500F4C84D /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = B02171EB2BBB618500F4C84D /* FirebaseStorage */; };
 		B0316DD02BD942F2000BCB46 /* ChatLogView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0316DCF2BD942F2000BCB46 /* ChatLogView.swift */; };
 		B0316DD22BD94AE9000BCB46 /* ChatBarComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0316DD12BD94AE9000BCB46 /* ChatBarComponent.swift */; };
-		B0316DD42BD94EE9000BCB46 /* ChatLogViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0316DD32BD94EE9000BCB46 /* ChatLogViewModel.swift */; };
 		B05801EE2B9A4DAA00880227 /* SplashScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = B05801ED2B9A4DAA00880227 /* SplashScreen.swift */; };
+		B0663D0B2C0288AD00D3B65E /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0663D0A2C0288AD00D3B65E /* ImagePicker.swift */; };
+		B0663D0D2C028C6E00D3B65E /* MessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0663D0C2C028C6E00D3B65E /* MessageView.swift */; };
 		B07695D22BA9A5C40086C1D0 /* ApperanceScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = B07695D12BA9A5C40086C1D0 /* ApperanceScreen.swift */; };
 		B08EFD442BA621E600B5DE33 /* ProfileScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = B08EFD432BA621E600B5DE33 /* ProfileScreen.swift */; };
 		B08EFD462BA6221700B5DE33 /* SettingsScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = B08EFD452BA6221700B5DE33 /* SettingsScreen.swift */; };
@@ -64,8 +65,9 @@
 		B0216E9E2B83D0750071DFB6 /* RegisterScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterScreen.swift; sourceTree = "<group>"; };
 		B0316DCF2BD942F2000BCB46 /* ChatLogView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatLogView.swift; sourceTree = "<group>"; };
 		B0316DD12BD94AE9000BCB46 /* ChatBarComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatBarComponent.swift; sourceTree = "<group>"; };
-		B0316DD32BD94EE9000BCB46 /* ChatLogViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatLogViewModel.swift; sourceTree = "<group>"; };
 		B05801ED2B9A4DAA00880227 /* SplashScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreen.swift; sourceTree = "<group>"; };
+		B0663D0A2C0288AD00D3B65E /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
+		B0663D0C2C028C6E00D3B65E /* MessageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageView.swift; sourceTree = "<group>"; };
 		B07695D12BA9A5C40086C1D0 /* ApperanceScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApperanceScreen.swift; sourceTree = "<group>"; };
 		B08EFD432BA621E600B5DE33 /* ProfileScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileScreen.swift; sourceTree = "<group>"; };
 		B08EFD452BA6221700B5DE33 /* SettingsScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsScreen.swift; sourceTree = "<group>"; };
@@ -127,6 +129,7 @@
 				B0F44BBB2B8F872B00DF2A21 /* TopNavBar.swift */,
 				B0F44BBD2B8F934500DF2A21 /* NewMessagesBtn.swift */,
 				B0316DD12BD94AE9000BCB46 /* ChatBarComponent.swift */,
+				B0663D0A2C0288AD00D3B65E /* ImagePicker.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -155,6 +158,7 @@
 				B0911F572BCD97E6009EFA29 /* ChangePasswordScreen.swift */,
 				B0E825122BD6A47700BC29CD /* CreateNewMessageView.swift */,
 				B0316DCF2BD942F2000BCB46 /* ChatLogView.swift */,
+				B0663D0C2C028C6E00D3B65E /* MessageView.swift */,
 			);
 			path = Authenticated;
 			sourceTree = "<group>";
@@ -174,7 +178,6 @@
 			children = (
 				B0216E982B83C73A0071DFB6 /* Components */,
 				B0216E992B83C77C0071DFB6 /* Screens */,
-				B0316DD32BD94EE9000BCB46 /* ChatLogViewModel.swift */,
 			);
 			path = frontend;
 			sourceTree = "<group>";
@@ -409,11 +412,11 @@
 				B05801EE2B9A4DAA00880227 /* SplashScreen.swift in Sources */,
 				B0316DD02BD942F2000BCB46 /* ChatLogView.swift in Sources */,
 				B0D366A82BB1F71B00146174 /* FAQScreen.swift in Sources */,
-				B0316DD42BD94EE9000BCB46 /* ChatLogViewModel.swift in Sources */,
 				B0B4038F2BB72B5A00F6C745 /* AboutUs.swift in Sources */,
 				B0216E9F2B83D0750071DFB6 /* RegisterScreen.swift in Sources */,
 				B0F9E3952B8291AE00C08FD0 /* ContentView.swift in Sources */,
 				B0106E432BB0742100C937E7 /* ContactUsScreen.swift in Sources */,
+				B0663D0B2C0288AD00D3B65E /* ImagePicker.swift in Sources */,
 				B0C12B6A2B8E3D7F00B766B2 /* FirebaseManager.swift in Sources */,
 				B0F9E3932B8291AE00C08FD0 /* RealFlowApp.swift in Sources */,
 				B0216E9D2B83C7BC0071DFB6 /* LoginScreen.swift in Sources */,
@@ -426,6 +429,7 @@
 				B0FB951C2BAB0BD200721C3C /* AudioSettings.swift in Sources */,
 				B08EFD442BA621E600B5DE33 /* ProfileScreen.swift in Sources */,
 				B0911F582BCD97E6009EFA29 /* ChangePasswordScreen.swift in Sources */,
+				B0663D0D2C028C6E00D3B65E /* MessageView.swift in Sources */,
 				B0E825132BD6A47700BC29CD /* CreateNewMessageView.swift in Sources */,
 				B0ECFE7E2BCA8DD9002246C6 /* SupportMailView.swift in Sources */,
 			);
